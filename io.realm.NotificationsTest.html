@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">5</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.486s</div>
+<div class="counter">3.472s</div>
 <p>duration</p>
 </div>
 </td>
@@ -44,7 +44,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">94%</div>
+<div class="percent">72%</div>
 <p>successful</p>
 </div>
 </td>
@@ -106,6 +106,169 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </pre>
 </span>
 </div>
+<div class="test">
+<a name="testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification"></a>
+<h3 class="failures">testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
+at io.realm.Realm.deleteRealm(Realm.java:1247)
+at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testFailingSetAutoRefreshOnNonLooperThread"></a>
+<h3 class="failures">testFailingSetAutoRefreshOnNonLooperThread</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
+at io.realm.Realm.deleteRealm(Realm.java:1247)
+at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testHandlerNotRemovedToSoon"></a>
+<h3 class="failures">testHandlerNotRemovedToSoon</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
+at io.realm.Realm.deleteRealm(Realm.java:1247)
+at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1679)
+at android.os.Handler.handleCallback(Handler.java:725)
+at android.os.Handler.dispatchMessage(Handler.java:92)
+at android.os.Looper.loop(Looper.java:137)
+at android.app.ActivityThread.main(ActivityThread.java:5041)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)
+at dalvik.system.NativeStart.main(Native Method)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testHandlerThreadShouldReceiveNotification"></a>
+<h3 class="failures">testHandlerThreadShouldReceiveNotification</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
+at io.realm.Realm.deleteRealm(Realm.java:1247)
+at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
+</pre>
+</span>
+</div>
 </div>
 <div id="tab1" class="tab">
 <h2>Tests</h2>
@@ -118,82 +281,82 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </thead>
 <tr>
 <td>testAddDuplicatedListener</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testAddRemoveListenerConcurrency</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testAsyncRealmObjectShouldNotBlockBackgroundCommitNotification</td>
-<td class="failures">failed (0s)</td>
-</tr>
-<tr>
-<td>testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testAutoUpdateRealmResults</td>
-<td class="success">passed (2.136s)</td>
-</tr>
-<tr>
-<td>testDoNotUseClosedHandler</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testEmptyCommitTriggerChangeListener</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testFailingSetAutoRefreshOnNonLooperThread</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testHandlerNotRemovedToSoon</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testHandlerThreadShouldReceiveNotification</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>testImmediateNotificationsOnSameThread</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>testLooperThreadQuitsLooperEarly</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testNonLooperThreadShouldNotifyLooperThreadAboutCommit</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testNotificationsNumber</td>
-<td class="success">passed (1.123s)</td>
-</tr>
-<tr>
-<td>testRemoveNotifications</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
-<td>testRemovingWeakReferenceListener</td>
-<td class="success">passed (0s)</td>
+<td>testAsyncRealmObjectShouldNotBlockBackgroundCommitNotification</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
-<td>testSetAutoRefreshOnHandlerThread</td>
+<td>testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</td>
+<td class="failures">failed (0s)</td>
+</tr>
+<tr>
+<td>testAutoUpdateRealmResults</td>
+<td class="success">passed (2.133s)</td>
+</tr>
+<tr>
+<td>testDoNotUseClosedHandler</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testEmptyCommitTriggerChangeListener</td>
 <td class="success">passed (0.030s)</td>
 </tr>
 <tr>
-<td>testWeakReferenceListener</td>
+<td>testFailingSetAutoRefreshOnNonLooperThread</td>
+<td class="failures">failed (0s)</td>
+</tr>
+<tr>
+<td>testHandlerNotRemovedToSoon</td>
+<td class="failures">failed (0.001s)</td>
+</tr>
+<tr>
+<td>testHandlerThreadShouldReceiveNotification</td>
+<td class="failures">failed (0.027s)</td>
+</tr>
+<tr>
+<td>testImmediateNotificationsOnSameThread</td>
 <td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testLooperThreadQuitsLooperEarly</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testNonLooperThreadShouldNotifyLooperThreadAboutCommit</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testNotificationsNumber</td>
+<td class="success">passed (1.117s)</td>
+</tr>
+<tr>
+<td>testRemoveNotifications</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testRemovingWeakReferenceListener</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testSetAutoRefreshOnHandlerThread</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testWeakReferenceListener</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 15, 2016 5:41:27 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 2:17:34 AM</p>
 </div>
 </div>
 </body>

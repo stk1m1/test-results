@@ -19,19 +19,19 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">738</div>
+<div class="counter">741</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">13</div>
+<div class="counter">18</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">50.146s</div>
+<div class="counter">52.600s</div>
 <p>duration</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">98%</div>
+<div class="percent">97%</div>
 <p>successful</p>
 </div>
 </td>
@@ -152,10 +152,34 @@
 </tr>
 <tr>
 <td class="failures">
-<a href="io.realm.RealmTest.html">RealmTest</a>
+<a href="io.realm.NotificationsTest.html">NotificationsTest</a>
 </td>
 <td class="failures">
-<a href="io.realm.RealmTest.html#s">testCloseRealmInChangeListener</a>
+<a href="io.realm.NotificationsTest.html#s">testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html">NotificationsTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html#s">testFailingSetAutoRefreshOnNonLooperThread</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html">NotificationsTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html#s">testHandlerNotRemovedToSoon</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html">NotificationsTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.NotificationsTest.html#s">testHandlerThreadShouldReceiveNotification</a>
 </td>
 </tr>
 <tr>
@@ -164,6 +188,22 @@
 </td>
 <td class="failures">
 <a href="io.realm.RealmTest.html#s">testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.RealmTest.html">RealmTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.RealmTest.html#s">testCloseRealmInChangeListenerWhenThereIsListenerOnObject</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.RealmTest.html">RealmTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.RealmTest.html#s">testCloseRealmInChangeListenerWhenThereIsListenerOnResults</a>
 </td>
 </tr>
 <tr>
@@ -194,10 +234,10 @@
 <td class="failures">
 <a href="io.realm.html">io.realm</a>
 </td>
-<td>738</td>
-<td>13</td>
-<td>50.146s</td>
-<td class="failures">98%</td>
+<td>741</td>
+<td>18</td>
+<td>52.600s</td>
+<td class="failures">97%</td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +260,7 @@
 <a href="io.realm.DynamicRealmObjectTest.html">io.realm.DynamicRealmObjectTest</a>
 <td>28</td>
 <td>0</td>
-<td>0.448s</td>
+<td>0.543s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -228,7 +268,7 @@
 <a href="io.realm.DynamicRealmTest.html">io.realm.DynamicRealmTest</a>
 <td>31</td>
 <td>9</td>
-<td>1.723s</td>
+<td>2.194s</td>
 <td class="failures">70%</td>
 </tr>
 <tr>
@@ -251,16 +291,16 @@
 <td class="failures"/>
 <a href="io.realm.NotificationsTest.html">io.realm.NotificationsTest</a>
 <td>18</td>
-<td>1</td>
-<td>3.486s</td>
-<td class="failures">94%</td>
+<td>5</td>
+<td>3.472s</td>
+<td class="failures">72%</td>
 </tr>
 <tr>
 <td class="success"/>
 <a href="io.realm.RealmAdapterTest.html">io.realm.RealmAdapterTest</a>
 <td>13</td>
 <td>0</td>
-<td>0.228s</td>
+<td>0.254s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -268,7 +308,7 @@
 <a href="io.realm.RealmAnnotationTest.html">io.realm.RealmAnnotationTest</a>
 <td>13</td>
 <td>0</td>
-<td>0.201s</td>
+<td>0.173s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -276,7 +316,7 @@
 <a href="io.realm.RealmAsyncQueryTests.html">io.realm.RealmAsyncQueryTests</a>
 <td>32</td>
 <td>0</td>
-<td>4.338s</td>
+<td>4.312s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -284,7 +324,7 @@
 <a href="io.realm.RealmCacheTest.html">io.realm.RealmCacheTest</a>
 <td>10</td>
 <td>0</td>
-<td>0.171s</td>
+<td>0.138s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -292,7 +332,7 @@
 <a href="io.realm.RealmConfigurationTest.html">io.realm.RealmConfigurationTest</a>
 <td>38</td>
 <td>0</td>
-<td>0.281s</td>
+<td>0.280s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -300,7 +340,7 @@
 <a href="io.realm.RealmInMemoryTest.html">io.realm.RealmInMemoryTest</a>
 <td>6</td>
 <td>0</td>
-<td>0.138s</td>
+<td>0.136s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -308,7 +348,7 @@
 <a href="io.realm.RealmInterprocessTest.html">io.realm.RealmInterprocessTest</a>
 <td>3</td>
 <td>0</td>
-<td>1.205s</td>
+<td>1.240s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -316,7 +356,7 @@
 <a href="io.realm.RealmJsonTest.html">io.realm.RealmJsonTest</a>
 <td>58</td>
 <td>0</td>
-<td>1.304s</td>
+<td>1.293s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -324,7 +364,7 @@
 <a href="io.realm.RealmLinkTests.html">io.realm.RealmLinkTests</a>
 <td>21</td>
 <td>0</td>
-<td>0.502s</td>
+<td>0.443s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -332,7 +372,7 @@
 <a href="io.realm.RealmListTest.html">io.realm.RealmListTest</a>
 <td>60</td>
 <td>0</td>
-<td>1.273s</td>
+<td>1.365s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -340,7 +380,7 @@
 <a href="io.realm.RealmMigrationTests.html">io.realm.RealmMigrationTests</a>
 <td>15</td>
 <td>0</td>
-<td>0.666s</td>
+<td>0.582s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -348,7 +388,7 @@
 <a href="io.realm.RealmObjectSchemaTests.html">io.realm.RealmObjectSchemaTests</a>
 <td>31</td>
 <td>0</td>
-<td>0.667s</td>
+<td>0.662s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -356,7 +396,7 @@
 <a href="io.realm.RealmObjectTest.html">io.realm.RealmObjectTest</a>
 <td>45</td>
 <td>0</td>
-<td>0.979s</td>
+<td>0.895s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -364,7 +404,7 @@
 <a href="io.realm.RealmQueryTest.html">io.realm.RealmQueryTest</a>
 <td>87</td>
 <td>0</td>
-<td>5.246s</td>
+<td>5.393s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -372,15 +412,15 @@
 <a href="io.realm.RealmResultsIteratorTests.html">io.realm.RealmResultsIteratorTests</a>
 <td>6</td>
 <td>0</td>
-<td>0.166s</td>
+<td>0.082s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success"/>
 <a href="io.realm.RealmResultsTest.html">io.realm.RealmResultsTest</a>
-<td>68</td>
+<td>71</td>
 <td>0</td>
-<td>19.514s</td>
+<td>21.250s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -388,23 +428,23 @@
 <a href="io.realm.RealmSchemaTests.html">io.realm.RealmSchemaTests</a>
 <td>10</td>
 <td>0</td>
-<td>0.137s</td>
+<td>0.168s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="failures"/>
 <a href="io.realm.RealmTest.html">io.realm.RealmTest</a>
 <td>104</td>
-<td>2</td>
-<td>6.711s</td>
-<td class="failures">98%</td>
+<td>3</td>
+<td>6.934s</td>
+<td class="failures">97%</td>
 </tr>
 <tr>
 <td class="success"/>
 <a href="io.realm.RxJavaTests.html">io.realm.RxJavaTests</a>
 <td>15</td>
 <td>0</td>
-<td>0.307s</td>
+<td>0.342s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -412,7 +452,7 @@
 <a href="io.realm.SortTest.html">io.realm.SortTest</a>
 <td>6</td>
 <td>0</td>
-<td>0.115s</td>
+<td>0.110s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -420,7 +460,7 @@
 <a href="io.realm.TypeBasedNotificationsTest.html">io.realm.TypeBasedNotificationsTest</a>
 <td>10</td>
 <td>1</td>
-<td>0.282s</td>
+<td>0.281s</td>
 <td class="failures">90%</td>
 </tr>
 </tbody>
@@ -429,7 +469,7 @@
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 15, 2016 5:41:27 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 2:17:34 AM</p>
 </div>
 </div>
 </body>

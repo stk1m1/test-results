@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.292s</div>
+<div class="counter">4.289s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">96%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,10 +54,40 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testFindAllSortedMultiAsyncBatchUpdate"></a>
+<h3 class="failures">testFindAllSortedMultiAsyncBatchUpdate</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;10&gt; but was:&lt;12&gt;
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:645)
+at org.junit.Assert.assertEquals(Assert.java:631)
+at io.realm.RealmAsyncQueryTests$22$3.onChange(RealmAsyncQueryTests.java:1869)
+at io.realm.RealmResults.notifyChangeListeners(RealmResults.java:907)
+at io.realm.HandlerController.completedAsyncQueriesUpdate(HandlerController.java:469)
+at io.realm.HandlerController.handleMessage(HandlerController.java:116)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:137)
+at io.realm.RealmAsyncQueryTests$22.run(RealmAsyncQueryTests.java:1923)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:390)
+at java.util.concurrent.FutureTask.run(FutureTask.java:234)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1080)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:573)
+at java.lang.Thread.run(Thread.java:856)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -68,23 +98,23 @@
 </thead>
 <tr>
 <td>testAccessingRealmListOnUnloadedRealmObjectShouldThrow</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testAsyncDistinct</td>
-<td class="success">passed (0.373s)</td>
+<td class="success">passed (0.403s)</td>
 </tr>
 <tr>
 <td>testAsyncDistinctFieldDoesNotExist</td>
-<td class="success">passed (0.343s)</td>
+<td class="success">passed (0.348s)</td>
 </tr>
 <tr>
 <td>testAsyncDistinctNotIndexedFields</td>
-<td class="success">passed (0.375s)</td>
+<td class="success">passed (0.350s)</td>
 </tr>
 <tr>
 <td>testAsyncQueryOnNonLooperThreadShouldThrow</td>
-<td class="success">passed (0.001s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testAsyncTransaction</td>
@@ -92,23 +122,23 @@
 </tr>
 <tr>
 <td>testAsyncTransactionThatThrowsRuntimeException</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testBatchUpdateDifferentTypeOfQueries</td>
-<td class="success">passed (0.404s)</td>
+<td class="success">passed (0.397s)</td>
 </tr>
 <tr>
 <td>testClosedBeforeAsyncTransactionError</td>
-<td class="success">passed (0.055s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testClosedBeforeAsyncTransactionSuccess</td>
-<td class="success">passed (0.250s)</td>
+<td class="success">passed (0.230s)</td>
 </tr>
 <tr>
 <td>testCombiningAsyncAndSync</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testFindAllAsync</td>
@@ -116,15 +146,15 @@
 </tr>
 <tr>
 <td>testFindAllAsyncBatchUpdate</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testFindAllAsyncRetry</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testFindAllAsyncWithNotification</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFindAllCallerIsAdvanced</td>
@@ -132,35 +162,35 @@
 </tr>
 <tr>
 <td>testFindAllCallerThreadBehind</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testFindAllSortedAsync</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testFindAllSortedAsyncBatchUpdate</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testFindAllSortedAsyncRetry</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testFindAllSortedMultiAsyncBatchUpdate</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
+<td>testFindAllSortedMultiAsyncBatchUpdate</td>
+<td class="failures">failed (0.029s)</td>
+</tr>
+<tr>
 <td>testFindFirstAsync</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncRetry</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncUpdatedIfSyncRealmObjectIsUpdated</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncWithInitialEmptyRow</td>
@@ -168,11 +198,11 @@
 </tr>
 <tr>
 <td>testFindFirstAsyncWithNotification</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testForceLoadAsync</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testForceLoadFindFirstAsync</td>
@@ -180,7 +210,7 @@
 </tr>
 <tr>
 <td>testListenerShouldNotLeak</td>
-<td class="success">passed (0.141s)</td>
+<td class="success">passed (0.144s)</td>
 </tr>
 <tr>
 <td>testReusingQuery</td>
@@ -192,14 +222,14 @@
 </tr>
 <tr>
 <td>testStressTestBackgroundCommits</td>
-<td class="success">passed (1.980s)</td>
+<td class="success">passed (1.942s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 2:53:47 AM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 3:01:12 AM</p>
 </div>
 </div>
 </body>

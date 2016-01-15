@@ -22,19 +22,19 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">104</div>
+<div class="counter">111</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">3</div>
+<div class="counter">5</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">6.761s</div>
+<div class="counter">7.226s</div>
 <p>duration</p>
 </div>
 </td>
@@ -44,7 +44,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">97%</div>
+<div class="percent">95%</div>
 <p>successful</p>
 </div>
 </td>
@@ -67,12 +67,12 @@
 <h3 class="failures">testCloseRealmInChangeListener</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
-at io.realm.Realm.deleteRealm(Realm.java:1235)
-at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:69)
-at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:54)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
+at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:56)
 at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
 at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
@@ -105,12 +105,12 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
-at io.realm.Realm.deleteRealm(Realm.java:1235)
-at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:69)
-at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:54)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
+at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:56)
 at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
 at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
@@ -139,16 +139,92 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </span>
 </div>
 <div class="test">
-<a name="testCloseRealmInChangeListenerWhenThereIsListenerOnObject"></a>
-<h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnObject</h3>
+<a name="testCloseRealmInChangeListenerWhenThereIsListenerOnResults"></a>
+<h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnResults</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:547)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:543)
-at io.realm.Realm.deleteRealm(Realm.java:1235)
-at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:69)
-at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:54)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
+at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:56)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testRemoveAllChangeListenersThrowExceptionOnNonLooperThread"></a>
+<h3 class="failures">testRemoveAllChangeListenersThrowExceptionOnNonLooperThread</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
+at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:56)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testRemoveChangeListenerThrowExceptionOnNonLooperThread"></a>
+<h3 class="failures">testRemoveChangeListenerThrowExceptionOnNonLooperThread</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
+at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:56)
 at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
 at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
@@ -188,23 +264,23 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </thead>
 <tr>
 <td>testAllObjectsSorted</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testBeginTransaction</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCancelTransaction</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testCannotCreateDynamicRealmObject</td>
+<td>testBeginTransaction</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testCancelTransaction</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
+<td>testCannotCreateDynamicRealmObject</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
 <td>testCannotRefreshInTransaction</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCheckValid</td>
@@ -215,8 +291,20 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
+<td>testClearAll</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testClearAllCalledOutsideTransaction</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testClearAllInWrongThreadShouldThrow</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
 <td>testCloseRealmInChangeListener</td>
-<td class="failures">failed (0.028s)</td>
+<td class="failures">failed (0.029s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject</td>
@@ -224,23 +312,23 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnObject</td>
-<td class="failures">failed (0.057s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnResults</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (0.056s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInDifferentThread</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testClosingRealmWhileOtherThreadIsOpeningRealm</td>
-<td class="success">passed (0.113s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>testColumnIndicesIsPopulatedWhenSkippingInitialization</td>
-<td class="success">passed (0.058s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCommitTransaction</td>
@@ -248,11 +336,11 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCommitTransactionAfterCancelTransaction</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCompactEmptyRealmFile</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCompactEncryptedEmptyRealmFile</td>
@@ -260,7 +348,7 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCompactEncryptedPopulatedRealmFile</td>
-<td class="success">passed (0.057s)</td>
+<td class="success">passed (0.059s)</td>
 </tr>
 <tr>
 <td>testCompactPopulateRealmFile</td>
@@ -272,23 +360,31 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCopyFromRealm</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testCopyFromRealmCyclicObjectGraph</td>
 <td class="success">passed (0.027s)</td>
 </tr>
 <tr>
+<td>testCopyFromRealmCyclicObjectGraph</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
 <td>testCopyFromRealmDifferentObjects</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testCopyFromRealmDynamicRealmListThrows</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testCopyFromRealmDynamicRealmObjectThrows</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithDepth</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithDifferentDepths</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithInvalidDepth</td>
@@ -296,11 +392,11 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCopyInvalidObjectFromRealmThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyListFromRealmSameElements</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testCopyListFromRealmWithInvalidDepth</td>
@@ -308,35 +404,35 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCopyListInvalidObjectFromRealmThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyManagedObjectIsNoop</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCopyManagedObjectToOtherRealm</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.059s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateAddObject</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateIterable</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateIterableChildObjects</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateNoPrimaryKeyThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.056s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateObject</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdatePrimaryKeyMix</td>
@@ -344,43 +440,43 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCopyOrUpdateReferencesNotDeleted</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateWithStandaloneDefaultObject</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmCyclic</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmCyclicList</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmDefaultValues</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmDontCopyNestedRealmObjects</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmList</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmNullObjectThrows</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmObject</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmOrUpdateNullPrimaryKeyThrows</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmOrUpdateNullThrows</td>
@@ -388,43 +484,43 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCopyToRealmWithPrimaryAsNullThrows</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmWithPrimaryKeySetValueDirectly</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testCreateFile</td>
-<td class="success">passed (0.192s)</td>
+<td class="success">passed (0.219s)</td>
 </tr>
 <tr>
 <td>testDeleteNonRealmFile</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testDeleteRealmFile</td>
-<td class="success">passed (0.057s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testDistinct</td>
-<td class="success">passed (0.350s)</td>
+<td class="success">passed (0.314s)</td>
 </tr>
 <tr>
 <td>testDistinctDoesNotExist</td>
-<td class="success">passed (0.369s)</td>
+<td class="success">passed (0.364s)</td>
 </tr>
 <tr>
 <td>testDistinctInvalidTypes</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testDistinctNotIndexedFields</td>
-<td class="success">passed (0.347s)</td>
+<td class="success">passed (0.344s)</td>
 </tr>
 <tr>
 <td>testDistinctWithNull</td>
-<td class="success">passed (0.230s)</td>
+<td class="success">passed (0.221s)</td>
 </tr>
 <tr>
 <td>testDoubleCommitThrows</td>
@@ -432,11 +528,11 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testExecuteTransactionCancel</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testExecuteTransactionCancelledInExecuteThrowsRuntimeException</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testExecuteTransactionCommit</td>
@@ -444,27 +540,27 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testExecuteTransactionNull</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testGetInstanceFileNoWritePermissionThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testGetInstanceFolderNoWritePermissionThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testGetInstanceNullFolderThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testGetRealmAfterCompactRealm</td>
-<td class="success">passed (0.058s)</td>
+<td class="success">passed (0.055s)</td>
 </tr>
 <tr>
 <td>testInternalRealmChangedHandlersRemoved</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.050s)</td>
 </tr>
 <tr>
 <td>testIsEmpty</td>
@@ -472,7 +568,7 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testIsInTransaction</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testMethodsThrowOnWrongThread</td>
@@ -484,19 +580,19 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testNestedTransaction</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testOpenRealmFileDeletionShouldThrow</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testOpenRealmWhileTransactionInAnotherThread</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testOpeningOfEncryptedRealmWithDifferentKeyInstances</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.051s)</td>
 </tr>
 <tr>
 <td>testProcessLocalListenersAfterRefresh</td>
@@ -504,39 +600,47 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testQueriesFailWithInvalidDataTypes</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testQueriesFailWithNullQueryValue</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testQueriesResults</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.055s)</td>
 </tr>
 <tr>
 <td>testQueriesWithDataTypes</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testRealmIsClosed</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testRealmIsClosedInDifferentThread</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>testRealmIsClosedInDifferentThread</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
 <td>testReferenceCounting</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.055s)</td>
 </tr>
 <tr>
 <td>testReferenceCountingDoubleClose</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testRemoveAllChangeListenersThrowExceptionOnNonLooperThread</td>
+<td class="failures">failed (0.031s)</td>
+</tr>
+<tr>
+<td>testRemoveChangeListenerThrowExceptionOnNonLooperThread</td>
+<td class="failures">failed (0.029s)</td>
 </tr>
 <tr>
 <td>testShouldContainTable</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testShouldCreateRealm</td>
@@ -544,23 +648,23 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testShouldFailOutsideTransaction</td>
-<td class="success">passed (0.001s)</td>
-</tr>
-<tr>
-<td>testShouldGetObject</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>testShouldGetObject</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
 <td>testShouldGetTable</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testShouldNotFailCreateRealmWithNullContext</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testShouldRemoveRow</td>
-<td class="success">passed (0.059s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testShouldReturnResultSet</td>
@@ -568,11 +672,11 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testShouldReturnTableOrViewList</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testSortMultiFailures</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testSortSingleField</td>
@@ -580,15 +684,15 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testSortTwoFields</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testUTF8</td>
-<td class="success">passed (2.911s)</td>
+<td class="success">passed (3.035s)</td>
 </tr>
 <tr>
 <td>testUpdateCyclicObject</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testUpdateObjectWithLinks</td>
@@ -596,18 +700,18 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testWriteCopyTo</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testWriteEncryptedCopy</td>
-<td class="success">passed (0.059s)</td>
+<td class="success">passed (0.051s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 3:01:12 AM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 3:41:17 AM</p>
 </div>
 </div>
 </body>

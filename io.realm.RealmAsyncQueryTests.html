@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.324s</div>
+<div class="counter">4.332s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">96%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,54 +54,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testBatchUpdateDifferentTypeOfQueries"></a>
-<h3 class="failures">testBatchUpdateDifferentTypeOfQueries</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:71)
-at io.realm.rule.RunInLooperThread.after(RunInLooperThread.java:58)
-at io.realm.rule.RunInLooperThread$1.evaluate(RunInLooperThread.java:103)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -116,43 +72,43 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testAsyncDistinct</td>
-<td class="success">passed (0.420s)</td>
+<td class="success">passed (0.367s)</td>
 </tr>
 <tr>
 <td>testAsyncDistinctFieldDoesNotExist</td>
-<td class="success">passed (0.364s)</td>
+<td class="success">passed (0.367s)</td>
 </tr>
 <tr>
 <td>testAsyncDistinctNotIndexedFields</td>
-<td class="success">passed (0.368s)</td>
+<td class="success">passed (0.366s)</td>
 </tr>
 <tr>
 <td>testAsyncQueryOnNonLooperThreadShouldThrow</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testAsyncTransaction</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testAsyncTransactionThatThrowsRuntimeException</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testBatchUpdateDifferentTypeOfQueries</td>
-<td class="failures">failed (0.399s)</td>
+<td class="success">passed (0.394s)</td>
 </tr>
 <tr>
 <td>testClosedBeforeAsyncTransactionError</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testClosedBeforeAsyncTransactionSuccess</td>
-<td class="success">passed (0.246s)</td>
+<td class="success">passed (0.223s)</td>
 </tr>
 <tr>
 <td>testCombiningAsyncAndSync</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testFindAllAsync</td>
@@ -160,75 +116,75 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testFindAllAsyncBatchUpdate</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testFindAllAsyncRetry</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testFindAllAsyncWithNotification</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFindAllCallerIsAdvanced</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testFindAllCallerThreadBehind</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testFindAllSortedAsync</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>testFindAllSortedAsyncBatchUpdate</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testFindAllSortedAsyncRetry</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testFindAllSortedMultiAsyncBatchUpdate</td>
 <td class="success">passed (0.025s)</td>
 </tr>
 <tr>
-<td>testFindFirstAsync</td>
+<td>testFindAllSortedAsync</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testFindAllSortedAsyncBatchUpdate</td>
 <td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testFindAllSortedAsyncRetry</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testFindAllSortedMultiAsyncBatchUpdate</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testFindFirstAsync</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncRetry</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncUpdatedIfSyncRealmObjectIsUpdated</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFindFirstAsyncWithInitialEmptyRow</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testFindFirstAsyncWithNotification</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
-<td>testForceLoadAsync</td>
+<td>testFindFirstAsyncWithNotification</td>
 <td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testForceLoadAsync</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testForceLoadFindFirstAsync</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testListenerShouldNotLeak</td>
-<td class="success">passed (0.119s)</td>
+<td class="success">passed (0.144s)</td>
 </tr>
 <tr>
 <td>testReusingQuery</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testStandaloneObjectAsyncBehaviour</td>
@@ -236,14 +192,14 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testStressTestBackgroundCommits</td>
-<td class="success">passed (1.979s)</td>
+<td class="success">passed (2.019s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 3:41:17 AM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 1:55:54 PM</p>
 </div>
 </div>
 </body>

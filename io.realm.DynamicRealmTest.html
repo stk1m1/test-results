@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">7</div>
+<div class="counter">6</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.724s</div>
+<div class="counter">2.100s</div>
 <p>duration</p>
 </div>
 </td>
@@ -44,7 +44,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">77%</div>
+<div class="percent">80%</div>
 <p>successful</p>
 </div>
 </td>
@@ -290,44 +290,6 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </pre>
 </span>
 </div>
-<div class="test">
-<a name="testSortTwoFields"></a>
-<h3 class="failures">testSortTwoFields</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.DynamicRealmTest.setUp(DynamicRealmTest.java:46)
-at junit.framework.TestCase.runBare(TestCase.java:132)
-at junit.framework.TestResult$1.protect(TestResult.java:115)
-at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
-at junit.framework.TestResult.run(TestResult.java:118)
-at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
-at junit.framework.TestCase.run(TestCase.java:124)
-at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
-at junit.framework.TestSuite.runTest(TestSuite.java:243)
-at junit.framework.TestSuite.run(TestSuite.java:238)
-at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
-at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
-at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
-</pre>
-</span>
-</div>
 </div>
 <div id="tab1" class="tab">
 <h2>Tests</h2>
@@ -340,31 +302,31 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </thead>
 <tr>
 <td>testAccessingDynamicRealmObjectBeforeAsyncQueryCompleted</td>
-<td class="success">passed (0.054s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testAllObjectsSorted</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testAllObjectsSortedWrongFieldNameThrows</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>testAndroidTestCaseSetupProperly</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testClear</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testClearInvalidNameThrows</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>testAndroidTestCaseSetupProperly</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testClear</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testClearInvalidNameThrows</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
 <td>testClearOutsideTransactionThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCreateObject</td>
@@ -372,39 +334,39 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testCreateObjectWithIllegalPrimaryKeyValueThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCreateObjectWithPrimaryKey</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testDeleteThrowsIfDynamicRealmIsOpen</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testDeleteThrowsIfTypedRealmIsOpen</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testDistinct</td>
-<td class="success">passed (0.390s)</td>
-</tr>
-<tr>
-<td>testDistinctAsync</td>
-<td class="success">passed (0.435s)</td>
-</tr>
-<tr>
-<td>testDistinctInvalidClassNameThrows</td>
 <td class="success">passed (0.027s)</td>
 </tr>
 <tr>
-<td>testDistinctInvalidFieldNamesThrows</td>
+<td>testDistinct</td>
+<td class="success">passed (0.450s)</td>
+</tr>
+<tr>
+<td>testDistinctAsync</td>
+<td class="success">passed (0.760s)</td>
+</tr>
+<tr>
+<td>testDistinctInvalidClassNameThrows</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testDistinctInvalidTypes</td>
+<td>testDistinctInvalidFieldNamesThrows</td>
 <td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testDistinctInvalidTypes</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testDistinctNotIndexedFields</td>
@@ -412,23 +374,23 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testExecuteTransactionCancel</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testExecuteTransactionCancelledInExecuteThrowsRuntimeException</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>testExecuteTransactionCommit</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>testExecuteTransactionNull</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>testExecuteTransactionCommit</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testExecuteTransactionNull</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
 <td>testFindAllAsync</td>
-<td class="success">passed (0.055s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testFindAllSortedAsync</td>
@@ -440,11 +402,11 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testFindFirstAsync</td>
-<td class="failures">failed (0s)</td>
+<td class="failures">failed (0.030s)</td>
 </tr>
 <tr>
 <td>testSeparateSharedGroups</td>
-<td class="failures">failed (0.001s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>testSortMultiFailures</td>
@@ -452,22 +414,22 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </tr>
 <tr>
 <td>testSortSingleField</td>
-<td class="failures">failed (0s)</td>
-</tr>
-<tr>
-<td>testSortTwoFields</td>
 <td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
+<td>testSortTwoFields</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>testWhere</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 3:41:17 AM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 16, 2016 1:55:54 PM</p>
 </div>
 </div>
 </body>

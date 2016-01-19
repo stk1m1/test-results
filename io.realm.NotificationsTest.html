@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">16</div>
+<div class="counter">11</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.093s</div>
+<div class="counter">2.306s</div>
 <p>duration</p>
 </div>
 </td>
@@ -44,7 +44,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">11%</div>
+<div class="percent">38%</div>
 <p>successful</p>
 </div>
 </td>
@@ -63,45 +63,14 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="testAddDuplicatedListener"></a>
-<h3 class="failures">testAddDuplicatedListener</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
-at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1679)
-at android.os.Handler.handleCallback(Handler.java:725)
-at android.os.Handler.dispatchMessage(Handler.java:92)
-at android.os.Looper.loop(Looper.java:137)
-at android.app.ActivityThread.main(ActivityThread.java:5041)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)
-at dalvik.system.NativeStart.main(Native Method)
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="testAddRemoveListenerConcurrency"></a>
 <h3 class="failures">testAddRemoveListenerConcurrency</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -129,54 +98,10 @@ at dalvik.system.NativeStart.main(Native Method)
 <h3 class="failures">testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testAutoUpdateRealmResults"></a>
-<h3 class="failures">testAutoUpdateRealmResults</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -217,10 +142,10 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testDoNotUseClosedHandler</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -257,45 +182,14 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 </span>
 </div>
 <div class="test">
-<a name="testEmptyCommitTriggerChangeListener"></a>
-<h3 class="failures">testEmptyCommitTriggerChangeListener</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
-at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1679)
-at android.os.Handler.handleCallback(Handler.java:725)
-at android.os.Handler.dispatchMessage(Handler.java:92)
-at android.os.Looper.loop(Looper.java:137)
-at android.app.ActivityThread.main(ActivityThread.java:5041)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)
-at dalvik.system.NativeStart.main(Native Method)
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="testFailingSetAutoRefreshOnNonLooperThread"></a>
 <h3 class="failures">testFailingSetAutoRefreshOnNonLooperThread</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -336,10 +230,10 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testHandlerNotRemovedToSoon</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -367,10 +261,10 @@ at dalvik.system.NativeStart.main(Native Method)
 <h3 class="failures">testHandlerThreadShouldReceiveNotification</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -411,10 +305,10 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testImmediateNotificationsOnSameThread</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -442,54 +336,10 @@ at dalvik.system.NativeStart.main(Native Method)
 <h3 class="failures">testLooperThreadQuitsLooperEarly</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testNonLooperThreadShouldNotifyLooperThreadAboutCommit"></a>
-<h3 class="failures">testNonLooperThreadShouldNotifyLooperThreadAboutCommit</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -530,10 +380,10 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testNotificationsNumber</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -574,41 +424,10 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:16
 <h3 class="failures">testRemoveNotifications</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
-at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
-at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1679)
-at android.os.Handler.handleCallback(Handler.java:725)
-at android.os.Handler.dispatchMessage(Handler.java:92)
-at android.os.Looper.loop(Looper.java:137)
-at android.app.ActivityThread.main(ActivityThread.java:5041)
-at java.lang.reflect.Method.invokeNative(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:511)
-at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)
-at dalvik.system.NativeStart.main(Native Method)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testRemovingWeakReferenceListener"></a>
-<h3 class="failures">testRemovingWeakReferenceListener</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -636,10 +455,10 @@ at dalvik.system.NativeStart.main(Native Method)
 <h3 class="failures">testWeakReferenceListener</h3>
 <span class="code">
 <pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file.
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:561)
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:576)
 at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:557)
-at io.realm.Realm.deleteRealm(Realm.java:1240)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
 at io.realm.NotificationsTest.setUp(NotificationsTest.java:77)
 at java.lang.reflect.Method.invokeNative(Native Method)
 at java.lang.reflect.Method.invoke(Method.java:511)
@@ -674,7 +493,7 @@ at dalvik.system.NativeStart.main(Native Method)
 </thead>
 <tr>
 <td>testAddDuplicatedListener</td>
-<td class="failures">failed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testAddRemoveListenerConcurrency</td>
@@ -682,7 +501,7 @@ at dalvik.system.NativeStart.main(Native Method)
 </tr>
 <tr>
 <td>testAsyncRealmObjectShouldNotBlockBackgroundCommitNotification</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</td>
@@ -690,23 +509,23 @@ at dalvik.system.NativeStart.main(Native Method)
 </tr>
 <tr>
 <td>testAutoUpdateRealmResults</td>
-<td class="failures">failed (0s)</td>
+<td class="success">passed (2.126s)</td>
 </tr>
 <tr>
 <td>testDoNotUseClosedHandler</td>
-<td class="failures">failed (0s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>testEmptyCommitTriggerChangeListener</td>
-<td class="failures">failed (0s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testFailingSetAutoRefreshOnNonLooperThread</td>
-<td class="failures">failed (0s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>testHandlerNotRemovedToSoon</td>
-<td class="failures">failed (0.028s)</td>
+<td class="failures">failed (0.029s)</td>
 </tr>
 <tr>
 <td>testHandlerThreadShouldReceiveNotification</td>
@@ -714,7 +533,7 @@ at dalvik.system.NativeStart.main(Native Method)
 </tr>
 <tr>
 <td>testImmediateNotificationsOnSameThread</td>
-<td class="failures">failed (0s)</td>
+<td class="failures">failed (0.028s)</td>
 </tr>
 <tr>
 <td>testLooperThreadQuitsLooperEarly</td>
@@ -722,19 +541,19 @@ at dalvik.system.NativeStart.main(Native Method)
 </tr>
 <tr>
 <td>testNonLooperThreadShouldNotifyLooperThreadAboutCommit</td>
-<td class="failures">failed (0.030s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testNotificationsNumber</td>
-<td class="failures">failed (0s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>testRemoveNotifications</td>
-<td class="failures">failed (0.001s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>testRemovingWeakReferenceListener</td>
-<td class="failures">failed (0.001s)</td>
+<td class="success">passed (0.031s)</td>
 </tr>
 <tr>
 <td>testSetAutoRefreshOnHandlerThread</td>
@@ -742,14 +561,14 @@ at dalvik.system.NativeStart.main(Native Method)
 </tr>
 <tr>
 <td>testWeakReferenceListener</td>
-<td class="failures">failed (0.001s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 18, 2016 3:08:55 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 19, 2016 2:33:02 PM</p>
 </div>
 </div>
 </body>

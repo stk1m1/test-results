@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">25</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.920s</div>
+<div class="counter">14.383s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">24%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,10 +54,967 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testAndroidTestCaseSetupProperly"></a>
+<h3 class="failures">testAndroidTestCaseSetupProperly</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_from_different_looper_realmobject_async"></a>
+<h3 class="failures">test_callback_with_relevant_commit_from_different_looper_realmobject_async</h3>
+<span class="code">
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:666)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:660)
+at io.realm.TypeBasedNotificationsTest.test_callback_with_relevant_commit_from_different_looper_realmobject_async(TypeBasedNotificationsTest.java:745)
+at java.lang.reflect.Method.invoke(Native Method)
+at junit.framework.TestCase.runTest(TestCase.java:168)
+at junit.framework.TestCase.runBare(TestCase.java:134)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_from_different_non_looper_realmobject_async"></a>
+<h3 class="failures">test_callback_with_relevant_commit_from_different_non_looper_realmobject_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_realmobject_async"></a>
+<h3 class="failures">test_callback_with_relevant_commit_realmobject_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_realmobject_sync"></a>
+<h3 class="failures">test_callback_with_relevant_commit_realmobject_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_realmresults_async"></a>
+<h3 class="failures">test_callback_with_relevant_commit_realmresults_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_callback_with_relevant_commit_realmresults_sync"></a>
+<h3 class="failures">test_callback_with_relevant_commit_realmresults_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_change_realm_objects_map_in_listener"></a>
+<h3 class="failures">test_change_realm_objects_map_in_listener</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_change_realm_results_map_in_listener"></a>
+<h3 class="failures">test_change_realm_results_map_in_listener</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_multiple_callbacks_should_be_invoked_realmobject_async"></a>
+<h3 class="failures">test_multiple_callbacks_should_be_invoked_realmobject_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_multiple_callbacks_should_be_invoked_realmobject_sync"></a>
+<h3 class="failures">test_multiple_callbacks_should_be_invoked_realmobject_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_multiple_callbacks_should_be_invoked_realmresults_async"></a>
+<h3 class="failures">test_multiple_callbacks_should_be_invoked_realmresults_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_multiple_callbacks_should_be_invoked_realmresults_sync"></a>
+<h3 class="failures">test_multiple_callbacks_should_be_invoked_realmresults_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_non_looper_thread_commit_realmobject_async"></a>
+<h3 class="failures">test_non_looper_thread_commit_realmobject_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_non_looper_thread_commit_realmobject_sync"></a>
+<h3 class="failures">test_non_looper_thread_commit_realmobject_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_non_looper_thread_commit_realmresults_async"></a>
+<h3 class="failures">test_non_looper_thread_commit_realmresults_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_non_looper_thread_commit_realmresults_sync"></a>
+<h3 class="failures">test_non_looper_thread_commit_realmresults_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_refresh_should_notify_callbacks_mixed"></a>
+<h3 class="failures">test_refresh_should_notify_callbacks_mixed</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_refresh_should_notify_callbacks_realmobject_async"></a>
+<h3 class="failures">test_refresh_should_notify_callbacks_realmobject_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_refresh_should_notify_callbacks_realmobject_sync"></a>
+<h3 class="failures">test_refresh_should_notify_callbacks_realmobject_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_refresh_should_notify_callbacks_realmresults_async"></a>
+<h3 class="failures">test_refresh_should_notify_callbacks_realmresults_async</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_refresh_should_notify_callbacks_realmresults_sync"></a>
+<h3 class="failures">test_refresh_should_notify_callbacks_realmresults_sync</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_should_throw_on_non_looper_thread_realm"></a>
+<h3 class="failures">test_should_throw_on_non_looper_thread_realm</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_should_throw_on_non_looper_thread_realmobject"></a>
+<h3 class="failures">test_should_throw_on_non_looper_thread_realmobject</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="test_should_throw_on_non_looper_thread_realmresults"></a>
+<h3 class="failures">test_should_throw_on_non_looper_thread_realmresults</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/files/default.realm
+at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
+at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
+at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
+at io.realm.Realm.deleteRealm(Realm.java:1244)
+at io.realm.TypeBasedNotificationsTest.setUp(TypeBasedNotificationsTest.java:63)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -68,23 +1025,23 @@
 </thead>
 <tr>
 <td>testAndroidTestCaseSetupProperly</td>
-<td class="success">passed (0.026s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_copyToRealm</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_copyToRealmOrUpdate</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createObject</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createObjectFromJson</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createObjectFromJson_from_JSONObject</td>
@@ -92,7 +1049,7 @@
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createObject_dynamic_realm</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createOrUpdateObjectFromJson</td>
@@ -100,110 +1057,110 @@
 </tr>
 <tr>
 <td>test_callback_should_trigger_for_createOrUpdateObjectFromJson_from_JSONObject</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_from_different_looper_realmobject_async</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (14.013s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_from_different_non_looper_realmobject_async</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_realmobject_async</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_realmobject_sync</td>
-<td class="success">passed (0.030s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_realmresults_async</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_callback_with_relevant_commit_realmresults_sync</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_change_realm_objects_map_in_listener</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_change_realm_results_map_in_listener</td>
-<td class="success">passed (0.026s)</td>
+<td class="failures">failed (0.028s)</td>
 </tr>
 <tr>
 <td>test_multiple_callbacks_should_be_invoked_realmobject_async</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_multiple_callbacks_should_be_invoked_realmobject_sync</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_multiple_callbacks_should_be_invoked_realmresults_async</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0.026s)</td>
 </tr>
 <tr>
 <td>test_multiple_callbacks_should_be_invoked_realmresults_sync</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_non_looper_thread_commit_realmobject_async</td>
-<td class="success">passed (0.228s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_non_looper_thread_commit_realmobject_sync</td>
-<td class="success">passed (0.026s)</td>
+<td class="failures">failed (0.027s)</td>
 </tr>
 <tr>
 <td>test_non_looper_thread_commit_realmresults_async</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_non_looper_thread_commit_realmresults_sync</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>test_refresh_should_notify_callbacks_mixed</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_refresh_should_notify_callbacks_realmobject_async</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_refresh_should_notify_callbacks_realmobject_sync</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (0.027s)</td>
 </tr>
 <tr>
 <td>test_refresh_should_notify_callbacks_realmresults_async</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_refresh_should_notify_callbacks_realmresults_sync</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (0.030s)</td>
 </tr>
 <tr>
 <td>test_should_throw_on_non_looper_thread_realm</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_should_throw_on_non_looper_thread_realmobject</td>
-<td class="success">passed (0.030s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>test_should_throw_on_non_looper_thread_realmresults</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (0.030s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 21, 2016 6:35:52 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 21, 2016 6:40:59 PM</p>
 </div>
 </div>
 </body>

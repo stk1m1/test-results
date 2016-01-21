@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Test results - Class io.realm.NotificationsTest</title>
+<title>Test results - Class io.realm.internal.JNIQueryTest</title>
 <link href="css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
 <script src="js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class io.realm.NotificationsTest</h1>
+<h1>Class io.realm.internal.JNIQueryTest</h1>
 <div class="breadcrumbs">
 <a href="index.html">all</a> &gt; 
-<a href="io.realm.html">io.realm</a> &gt; NotificationsTest</div>
+<a href="io.realm.internal.html">io.realm.internal</a> &gt; JNIQueryTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -22,7 +22,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">18</div>
+<div class="counter">22</div>
 <p>tests</p>
 </div>
 </td>
@@ -34,7 +34,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.585s</div>
+<div class="counter">0.285s</div>
 <p>duration</p>
 </div>
 </td>
@@ -67,76 +67,92 @@
 </tr>
 </thead>
 <tr>
-<td>testAddDuplicatedListener</td>
+<td>testColumnIndexOutOfBounds</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testAddRemoveListenerConcurrency</td>
-<td class="success">passed (0.027s)</td>
+<td>testDateQuery</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testAsyncRealmObjectShouldNotBlockBackgroundCommitNotification</td>
-<td class="success">passed (0.059s)</td>
+<td>testInvalidColumnIndexBetween</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testAsyncRealmResultsShouldNotBlockBackgroundCommitNotification</td>
-<td class="success">passed (0.027s)</td>
+<td>testInvalidColumnIndexContains</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testAutoUpdateRealmResults</td>
-<td class="success">passed (2.120s)</td>
+<td>testInvalidColumnIndexEqualTo</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testDoNotUseClosedHandler</td>
+<td>testInvalidColumnIndexGreaterThan</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testInvalidColumnIndexGreaterThanOrEqual</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testInvalidColumnIndexLessThan</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
-<td>testEmptyCommitTriggerChangeListener</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testFailingSetAutoRefreshOnNonLooperThread</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testHandlerNotRemovedToSoon</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testHandlerThreadShouldReceiveNotification</td>
+<td>testInvalidColumnIndexLessThanOrEqual</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
-<td>testImmediateNotificationsOnSameThread</td>
+<td>testInvalidColumnIndexNotEqualTo</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testLooperThreadQuitsLooperEarly</td>
+<td>testMaximumDate</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
-<td>testNonLooperThreadShouldNotifyLooperThreadAboutCommit</td>
+<td>testMinimumDate</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testNotificationsNumber</td>
-<td class="success">passed (1.126s)</td>
-</tr>
-<tr>
-<td>testRemoveNotifications</td>
+<td>testNonCompleteQuery</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testRemovingWeakReferenceListener</td>
+<td>testNullInputQuery</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testQueryOnView</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
+<td>testQueryOnViewWithAlreadyQueriedTable</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testQueryTestForNoMatches</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
-<td>testSetAutoRefreshOnHandlerThread</td>
+<td>testQueryWithSubtable</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testWeakReferenceListener</td>
+<td>testQueryWithUnbalancedSubtable</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testQueryWithWrongDataType</td>
 <td class="success">passed (0.056s)</td>
+</tr>
+<tr>
+<td>testShouldFind</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testShouldQuery</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 </table>
 </div>

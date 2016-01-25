@@ -1,0 +1,338 @@
+01-25 19:19:59.742 26412-26425/io.realm.test I/TestRunner: started: accessingRealmListOnUnloadedRealmObjectShouldThrow(io.realm.RealmAsyncQueryTests)
+01-25 19:19:59.742 26412-26412/io.realm.test I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+01-25 19:19:59.952 26412-26907/io.realm.test A/libc: Fatal signal 11 (SIGSEGV) at 0x0000000c (code=1), thread 26907 (pool-15-thread-)
+01-25 19:19:59.952 26412-26859/io.realm.test W/MessageQueue: Handler (android.os.Handler) {430081e8} sending message to a Handler on a dead thread
+                                                             java.lang.RuntimeException: Handler (android.os.Handler) {430081e8} sending message to a Handler on a dead thread
+                                                                 at android.os.MessageQueue.enqueueMessage(MessageQueue.java:320)
+                                                                 at android.os.Handler.enqueueMessage(Handler.java:626)
+                                                                 at android.os.Handler.sendMessageAtTime(Handler.java:595)
+                                                                 at android.os.Handler.sendMessageDelayed(Handler.java:566)
+                                                                 at android.os.Handler.sendMessage(Handler.java:503)
+                                                                 at android.os.Message.sendToTarget(Message.java:360)
+                                                                 at io.realm.RealmQuery.closeSharedGroupAndSendMessageToHandler(RealmQuery.java:1959)
+                                                                 at io.realm.RealmQuery.access$100(RealmQuery.java:60)
+                                                                 at io.realm.RealmQuery$5.call(RealmQuery.java:1903)
+                                                                 at io.realm.RealmQuery$5.call(RealmQuery.java:1881)
+                                                                 at io.realm.internal.async.BgPriorityCallable.call(BgPriorityCallable.java:36)
+                                                                 at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                                 at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+                                                                 at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+                                                                 at java.lang.Thread.run(Thread.java:841)
+01-25 19:19:59.992 1451-1451/? D/KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+01-25 19:19:59.992 1451-1451/? D/KeyguardUpdateMonitor: handleTimeUpdate
+01-25 19:19:59.992 1451-1451/? D/KeyguardModel: mReceiver, received action: android.intent.action.TIME_TICK, sendingUserId:-1
+01-25 19:20:00.002 1451-1451/? D/DateLayout: isFormat24Requested :false
+01-25 19:20:00.002 1451-1451/? D/DateLayout: hour :7	mintue :20
+01-25 19:20:00.002 1451-1451/? D/DateLayout: ampmTextClock : 오후
+01-25 19:20:00.002 1451-1451/? D/DateLayout: setContentDescription :1월 25일 월요일 오후 7시 20분
+01-25 19:20:00.022 1451-1451/? D/DigitalClock: isFormat24Requested :false
+01-25 19:20:00.022 1451-1451/? D/DigitalClock: hour :7	mintue :20
+01-25 19:20:00.022 1451-1451/? D/DigitalClock: ampmTextClock : 오후
+01-25 19:20:00.022 1451-1451/? D/DigitalClock: setContentDescription :1월 25일 월요일 오후 7시 20분
+01-25 19:20:00.032 1451-1451/? D/Clock: Clock updated, drawingStartTime : 1453717200042, nextTick: 59986, mDrawingTime: 4
+01-25 19:20:00.032 1451-1451/? D/Clock: Clock updated, drawingStartTime : 1453717200044, nextTick: 59987, mDrawingTime: 1
+01-25 19:20:00.042 285-285/? I/DEBUG: *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-25 19:20:00.042 285-285/? I/DEBUG: Build fingerprint: 'lge/g2_skt_kr/g2:4.4.2/KOT49I.F320S21u/F320S21u.1402398882:user/release-keys'
+01-25 19:20:00.042 285-285/? I/DEBUG: Revision: '10'
+01-25 19:20:00.042 285-285/? I/DEBUG: pid: 26412, tid: 26907, name: pool-15-thread-  >>> io.realm.test <<<
+01-25 19:20:00.042 285-285/? I/DEBUG: signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0000000c
+01-25 19:20:00.072 1451-1451/? D/KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+01-25 19:20:00.072 1451-1451/? D/KeyguardUpdateMonitor: handleTimeUpdate
+01-25 19:20:00.072 1451-1451/? D/KeyguardModel: mReceiver, received action: android.intent.action.TIME_TICK, sendingUserId:-1
+01-25 19:20:00.092 1451-1451/? D/DateLayout: isFormat24Requested :false
+01-25 19:20:00.092 1451-1451/? D/DateLayout: hour :7	mintue :20
+01-25 19:20:00.092 1451-1451/? D/DateLayout: ampmTextClock : 오후
+01-25 19:20:00.092 1451-1451/? D/DateLayout: setContentDescription :1월 25일 월요일 오후 7시 20분
+01-25 19:20:00.102 1451-1451/? D/DigitalClock: isFormat24Requested :false
+01-25 19:20:00.102 1451-1451/? D/DigitalClock: hour :7	mintue :20
+01-25 19:20:00.102 1451-1451/? D/DigitalClock: ampmTextClock : 오후
+01-25 19:20:00.102 1451-1451/? D/DigitalClock: setContentDescription :1월 25일 월요일 오후 7시 20분
+01-25 19:20:00.102 279-391/? I/Vold: [LGE][VOLD][NetlinkHandler.cpp][onEvent()] subsys:cpu, action:0
+01-25 19:20:00.312 285-285/? I/DEBUG:     r0 00000000  r1 60db3778  r2 00000000  r3 00000001
+01-25 19:20:00.312 285-285/? I/DEBUG:     r4 00000000  r5 00000000  r6 60db3778  r7 60dc4e44
+01-25 19:20:00.312 285-285/? I/DEBUG:     r8 610ecb10  r9 60dc4e3c  sl 60de0a78  fp 610ecb24
+01-25 19:20:00.312 285-285/? I/DEBUG:     ip 4025d32f  sp 610ecaf8  lr 417f54d0  pc 4025d304  cpsr 000e0030
+01-25 19:20:00.312 285-285/? I/DEBUG:     d0  0000000000000000  d1  0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d2  0000000000000000  d3  0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d4  4f03260202074009  d5  7365740b02000940
+01-25 19:20:00.312 285-285/? I/DEBUG:     d6  3220617461642074  d7  1104000402020105
+01-25 19:20:00.312 285-285/? I/DEBUG:     d8  0000000000000000  d9  0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d10 0000000000000000  d11 0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d12 0000000000000000  d13 0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d14 0000000000000000  d15 0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d16 6d6c6165722f6f69  d17 616e7265746e692f
+01-25 19:20:00.312 285-285/? I/DEBUG:     d18 42cad8b84300ce58  d19 42f4bc0042e5bf38
+01-25 19:20:00.312 285-285/? I/DEBUG:     d20 4308f368430123c0  d21 42f4bdb842f3a930
+01-25 19:20:00.312 285-285/? I/DEBUG:     d22 42fafd7842f3ab98  d23 42f567e842f4be88
+01-25 19:20:00.312 285-285/? I/DEBUG:     d24 0000000000000000  d25 0000000000000000
+01-25 19:20:00.312 285-285/? I/DEBUG:     d26 0000000000000000  d27 0909090909090909
+01-25 19:20:00.312 285-285/? I/DEBUG:     d28 0100010001000100  d29 0100010001000100
+01-25 19:20:00.322 285-285/? I/DEBUG:     d30 0909090909090909  d31 0909090909090909
+01-25 19:20:00.322 285-285/? I/DEBUG:     scr 60000010
+01-25 19:20:00.322 285-285/? I/DEBUG:     #00  pc 0006b304  /system/lib/libandroid_runtime.so (android::NativeMessageQueue::pollOnce(_JNIEnv*, int)+9)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #01  pc 000204cc  /system/lib/libdvm.so (dvmPlatformInvoke+112)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #02  pc 000512af  /system/lib/libdvm.so (dvmCallJNIMethod(unsigned int const*, JValue*, Method const*, Thread*)+398)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #03  pc 00029960  /system/lib/libdvm.so
+01-25 19:20:00.322 285-285/? I/DEBUG:     #04  pc 00030ec8  /system/lib/libdvm.so (dvmMterpStd(Thread*)+76)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #05  pc 0002e560  /system/lib/libdvm.so (dvmInterpret(Thread*, Method const*, JValue*)+184)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #06  pc 00063795  /system/lib/libdvm.so (dvmCallMethodV(Thread*, Method const*, Object*, bool, JValue*, std::__va_list)+336)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #07  pc 000637b9  /system/lib/libdvm.so (dvmCallMethod(Thread*, Method const*, Object*, JValue*, ...)+20)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #08  pc 0005848f  /system/lib/libdvm.so
+01-25 19:20:00.322 285-285/? I/DEBUG:     #09  pc 0000d2e0  /system/lib/libc.so (__thread_entry+72)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #10  pc 0000d478  /system/lib/libc.so (pthread_create+240)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecab8  60d98254  /data/app-lib/io.realm.test-1/librealm-jni.so
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecabc  60de0a68  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecac0  41805e7c  /system/lib/libdvm.so (dvmMterpStd(Thread*))
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecac4  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecac8  610ecba8  [stack:26907]
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecacc  60de0a68  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecad0  610ecb0c  [stack:26907]
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecad4  57ba50f0  /dev/ashmem/dalvik-LinearAlloc (deleted)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecad8  42b45358  /dev/ashmem/dalvik-heap (deleted)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecadc  41805ecc  /system/lib/libdvm.so (dvmMterpStd(Thread*)+80)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecae0  60faca30  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecae4  60faca30  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecae8  00faca30  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecaec  60fa9a60  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecaf0  60fbfcf8  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecaf4  fffffe5c  
+01-25 19:20:00.322 285-285/? I/DEBUG:     #00  610ecaf8  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecafc  60db3778  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb00  5788cee0  /dev/ashmem/dalvik-LinearAlloc (deleted)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb04  60de0a68  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb08  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb0c  417f54d0  /system/lib/libdvm.so (dvmPlatformInvoke+116)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #01  610ecb10  60dc4e3c  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb14  00000001  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb18  00000008  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb1c  418e6ee0  /dev/ashmem/dalvik-zygote (deleted)
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb20  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb24  418262b3  /system/lib/libdvm.so (dvmCallJNIMethod(unsigned int const*, JValue*, Method const*, Thread*)+402)
+01-25 19:20:00.322 285-285/? I/DEBUG:     #02  610ecb28  60dc4e3c  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb2c  5953d211  /system/framework/framework.odex
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb30  4025d32f  /system/lib/libandroid_runtime.so
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb34  60de0a78  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb38  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb3c  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb40  89b00001  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb44  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb48  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb4c  40168394  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb50  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb54  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb58  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb5c  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb60  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          610ecb64  00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:          ........  ........
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3758 00000000 60dce740 60db3770 00000013  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3768 60c79998 401681c8 00000010 00000023  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3778 418913c8 00000000 0000000c 60de0a68  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3788 00000000 00000000 60dd9028 0000001b  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3798 57b273a8 0000000e 00000000 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37a8 00000001 00000023 60f750e8 00000005  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37b8 60f91148 60f88ed8 00000000 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37c8 00000020 00000023 60d93970 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37d8 60d93a34 60f73638 60d93c3c 60f72ae0  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37e8 00000020 00000013 60c79998 401681c8  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37f8 00000010 00000053 60da5a90 60db9e98  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3808 60dce768 60da3778 60dafbb0 60dab098  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3818 60f77580 60f8fda0 60f91910 60dce408  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3828 00000000 ffffffff 60d98120 60f8fda0  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3838 00000000 00000000 00000000 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3848 00000050 0000001b 00000000 00000006  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3758 00000000 60dce740 60db3770 00000013  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3768 60c79998 401681c8 00000010 00000023  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3778 418913c8 00000000 0000000c 60de0a68  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3788 00000000 00000000 60dd9028 0000001b  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3798 57b273a8 0000000e 00000000 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37a8 00000001 00000023 60f750e8 00000005  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37b8 60f91148 60f88ed8 00000000 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37c8 00000020 00000023 60d93970 00000000  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37d8 60d93a34 60f73638 60d93c3c 60f72ae0  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37e8 00000020 00000013 60c79998 401681c8  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db37f8 00000010 00000053 60da5a90 60db9e98  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3808 60dce768 60da3778 60dafbb0 60dab098  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3818 60f77580 60f8fda0 60f91910 60dce408  
+01-25 19:20:00.322 285-285/? I/DEBUG:     60db3828 00000000 ffffffff 60d98120 60f8fda0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60db3838 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60db3848 00000050 0000001b 00000000 00000006  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e24 588cb2cc 60dc4e58 592c1232 5788cee0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e34 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e44 60dc4ea8 592bfa4e 5788d188 592c1232  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e54 00000000 588a5470 00000000 42b67870  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e64 0000000c 00000000 42b67a10 42b67ad0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e74 ffffffff 41a07cb8 60dc4ea8 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e84 592bfa46 5787b198 00000000 42c2dbc8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e94 60dc4ee8 606dfdb2 5788c8c0 592bfa4e  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ea4 00000000 0000672c 000027e9 606dfdac  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4eb4 42b67ad0 607331d6 00000000 42f552b0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ec4 42c2dbc8 42b73098 42b45318 42cabb10  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ed4 60dc4f20 5895afd0 57c49350 606dfdb2  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ee4 00000000 5782ad48 42cabb10 42c2de08  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ef4 42b67ad0 00000000 60dc4f3c 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4f04 00000000 42b67748 60dc4f3c 5895a3d8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4f14 57b60d50 5895afd0 00000000 42b67748  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecaf0 60fbfcf8 fffffe5c 00000000 60db3778  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb00 5788cee0 60de0a68 00000000 417f54d0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb10 60dc4e3c 00000001 00000008 418e6ee0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb20 00000000 418262b3 60dc4e3c 5953d211  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb30 4025d32f 60de0a78 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb40 89b00001 00000000 00000000 40168394  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb50 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb60 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb70 60de0a68 57ba50f0 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb80 418bf2a8 00000000 00000000 41838aa9  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb90 40168394 00000014 41899d50 40168394  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecba0 00000014 41801be8 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbb0 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbc0 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbd0 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbe0 00000000 993b900c 00000000 42a069e0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e1c 42b45348 60dc4e48 588cb2cc 60dc4e58  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e2c 592c1232 5788cee0 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e3c 00000000 00000000 60dc4ea8 592bfa4e  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e4c 5788d188 592c1232 00000000 588a5470  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e5c 00000000 42b67870 0000000c 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e6c 42b67a10 42b67ad0 ffffffff 41a07cb8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e7c 60dc4ea8 00000000 592bfa46 5787b198  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e8c 00000000 42c2dbc8 60dc4ee8 606dfdb2  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4e9c 5788c8c0 592bfa4e 00000000 0000672c  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4eac 000027e9 606dfdac 42b67ad0 607331d6  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ebc 00000000 42f552b0 42c2dbc8 42b73098  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4ecc 42b45318 42cabb10 60dc4f20 5895afd0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4edc 57c49350 606dfdb2 00000000 5782ad48  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4eec 42cabb10 42c2de08 42b67ad0 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4efc 60dc4f3c 00000000 00000000 42b67748  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60dc4f0c 60dc4f3c 5895a3d8 57b60d50 5895afd0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0a58 000000ea 00000000 00000a60 0000045b  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0a68 6077047c 60dc4e3c 5788d188 59871000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0a78 0000672c 000027e9 610ecc40 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0a88 610ecc94 0000000c 00000000 417f5640  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0a98 00000000 00000000 56de3870 60dc1300  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0aa8 00000000 00000000 00000001 00004000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0ab8 00000000 60dd4a80 417f5640 417fa580  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0ac8 00000000 417fe67c 417fe6f0 417fe5a0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0ad8 417fe5c0 417fe61c 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0ae8 60ddbe08 00000028 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0af8 00000000 00000006 00001ea0 4189a484  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0b08 00000000 00000000 00000001 60fcba08  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0b18 00000001 00000040 00000200 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0b28 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0b38 00000000 00000000 a31084d7 baaa3d84  
+01-25 19:20:00.332 285-285/? I/DEBUG:     60de0b48 bab83f3d ab083437 bab83ec5 f1d040b2  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb04 60de0a68 00000000 417f54d0 60dc4e3c  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb14 00000001 00000008 418e6ee0 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb24 418262b3 60dc4e3c 5953d211 4025d32f  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb34 60de0a78 00000000 00000000 89b00001  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb44 00000000 00000000 40168394 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb54 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb64 00000000 00000000 00000000 60de0a68  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb74 57ba50f0 00000000 00000000 418bf2a8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb84 00000000 00000000 41838aa9 40168394  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb94 00000014 41899d50 40168394 00000014  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecba4 41801be8 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbb4 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbc4 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbd4 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbe4 993b900c 00000000 42a069e0 57ba50f0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbf4 42ac8c40 42b45348 42f503c0 418bf2a8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d30c 462b6880 ee6af7d4 73256921 6830b141  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d31c 46306b42 46304790 f7f56921 6125fc6d  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d32c 4601bd7c 461a4610 bfe1f7ff f01f6880  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d33c 4610bb39 bffaf7ff 4604b510 4608680b  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d34c 4a064611 f8d3447a 68123190 60204798  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d35c 4621b110 ef96f7d2 bd104620 000487a8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d36c 4604b538 23054d0d 447d4a0d 4629447a  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d37c ed24f7d2 46296823 699a4620 4a094790  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d38c 447a4b09 4601447b f8d06820 46205178  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d39c 490647a8 60084479 bd382000 00031949  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3ac 00045cd8 0002e96d 00028472 00048758  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3bc b5104b06 4604447b f8403308 f7e53b08  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3cc 4620fa07 ef6ef7d3 bd104620 0003e90c  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3dc 4604b510 ffecf7ff f7d24620 4620eccc  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3ec 0000bd10 b5104b04 4604447b 60033308  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3fc ffdef7ff bd104620 0003e8b0 4604b510  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecad8 42b45358 41805ecc 60faca30 60faca30  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecae8 00faca30 60fa9a60 60fbfcf8 fffffe5c  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecaf8 00000000 60db3778 5788cee0 60de0a68  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb08 00000000 417f54d0 60dc4e3c 00000001  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb18 00000008 418e6ee0 00000000 418262b3  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb28 60dc4e3c 5953d211 4025d32f 60de0a78  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb38 00000000 00000000 89b00001 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb48 00000000 40168394 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb58 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb68 00000000 00000000 60de0a68 57ba50f0  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb78 00000000 00000000 418bf2a8 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb88 00000000 41838aa9 40168394 00000014  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecb98 41899d50 40168394 00000014 41801be8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecba8 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbb8 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     610ecbc8 00000000 00000000 00000000 00000000  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d2e4 c018f8d3 47e0462b 46294620 fc88f7f5  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d2f4 bdf82001 b573bdf8 46042500 460e2301  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d304 46117303 462a9500 462b6880 ee6af7d4  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d314 73256921 6830b141 46306b42 46304790  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d324 f7f56921 6125fc6d 4601bd7c 461a4610  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d334 bfe1f7ff f01f6880 4610bb39 bffaf7ff  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d344 4604b510 4608680b 4a064611 f8d3447a  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d354 68123190 60204798 4621b110 ef96f7d2  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d364 bd104620 000487a8 4604b538 23054d0d  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d374 447d4a0d 4629447a ed24f7d2 46296823  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d384 699a4620 4a094790 447a4b09 4601447b  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d394 f8d06820 46205178 490647a8 60084479  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3a4 bd382000 00031949 00045cd8 0002e96d  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3b4 00028472 00048758 b5104b06 4604447b  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3c4 f8403308 f7e53b08 4620fa07 ef6ef7d3  
+01-25 19:20:00.332 285-285/? I/DEBUG:     4025d3d4 bd104620 0003e90c 4604b510 ffecf7ff  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f54b0 3497c004 3488c004 3afffff9 e2888004  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f54c0 eafffff9 e899000c e59bc00c e12fff3c  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f54d0 e3560000 159bc010 e24bd014 188c0003  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f54e0 e8bd8bc0 e1a0ce22 e59b6008 e2866001  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f54f0 e3a02000 e4d6c001 e35c0000 0a000007  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5500 e2822001 e35c0044 135c004a 1afffff8  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5510 e3120001 12822001 02822002 eafffff4  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5520 e2522002 43b02000 0affffe5 e04dd102  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5530 e3cdd004 e1a07009 e1a0800d e59b6008  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5540 e2866001 e2877008 e4d6c001 e35c0044  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5550 135c004a 0a000004 e4d6c001 e35c0044  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5560 135c004a 02477004 0a000000 e4d6c001  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5570 e35c0000 0affffd2 e35c0044 135c004a  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5580 0a000002 e497c004 e488c004 eafffff6  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f5590 e2888007 e497c004 e3c88007 e4972004  
+01-25 19:20:00.332 285-285/? I/DEBUG:     417f55a0 e488c004 e4882004 eaffffef 00000000  
+01-25 19:20:00.492 1252-26917/? W/ActivityManager: Error in app io.realm.test running instrumentation ComponentInfo{io.realm.test/android.support.test.runner.AndroidJUnitRunner}:
+01-25 19:20:00.492 1252-26917/? W/ActivityManager:   Native crash
+01-25 19:20:00.492 1252-26917/? W/ActivityManager:   Native crash: Segmentation fault
+01-25 19:20:00.502 26372-26372/? D/AndroidRuntime: Shutting down VM
+01-25 19:20:00.502 26372-26392/? D/jdwp: Got wake-up signal, bailing out of select
+01-25 19:20:00.502 26372-26392/? D/dalvikvm: Debugger has detached; object registry had 1 entries
+01-25 19:20:00.512 288-288/? D/Zygote: Process 26412 terminated by signal (11)
+01-25 19:20:00.722 1252-26917/? I/ActivityManager: Force stopping io.realm.test appid=10217 user=0: finished inst
+01-25 19:20:00.722 1252-26917/? I/ActivityManager: Killing 26412:io.realm.test/u0a217 (adj 0): stop io.realm.test
+01-25 19:20:00.722 1252-26917/? I/MDM:  removeProcessLocked app.persistent = false callerWillRestart = false
+01-25 19:20:00.722 1252-26917/? I/ActivityManager: resumeTopActivitiesLocked(): target Stack:ActivityStack{43280bb8 stackId=0, 1 tasks}
+01-25 19:20:00.722 1252-26917/? D/ActivityManager: resumeTopActivityLocked: Going to sleep and all paused
+01-25 19:20:00.762 279-391/? I/Vold: [LGE][VOLD][NetlinkHandler.cpp][onEvent()] subsys:cpu, action:0
+01-25 19:20:00.822 279-391/? I/Vold: [LGE][VOLD][NetlinkHandler.cpp][onEvent()] subsys:cpu, action:0
+01-25 19:20:01.332 26934-26934/? D/AndroidRuntime: CheckJNI is OFF
+01-25 19:20:01.342 26934-26934/? D/dalvikvm: Trying to load lib libjavacore.so 0x0
+01-25 19:20:01.342 26934-26934/? D/dalvikvm: Added shared lib libjavacore.so 0x0
+01-25 19:20:01.352 26934-26934/? D/dalvikvm: Trying to load lib libnativehelper.so 0x0
+01-25 19:20:01.352 26934-26934/? D/dalvikvm: Added shared lib libnativehelper.so 0x0
+01-25 19:20:01.352 26934-26934/? D/dalvikvm: No JNI_OnLoad found in libnativehelper.so 0x0, skipping init
+01-25 19:20:01.392 26934-26934/? D/dalvikvm: Note: class Landroid/app/ActivityManagerNative; has 185 unimplemented (abstract) methods
+01-25 19:20:01.502 26934-26934/? E/memtrack: Couldn't load memtrack module (No such file or directory)
+01-25 19:20:01.502 26934-26934/? E/android.os.Debug: failed to load memtrack module: -2
+01-25 19:20:01.572 279-391/? I/Vold: [LGE][VOLD][NetlinkHandler.cpp][onEvent()] subsys:cpu, action:0
+01-25 19:20:01.582 26934-26934/? D/AndroidRuntime: Calling main entry com.android.commands.pm.Pm
+01-25 19:20:01.612 1252-1290/? I/ActivityManager: Force stopping io.realm.test appid=10217 user=-1: uninstall pkg
+01-25 19:20:01.612 1252-1290/? I/ActivityManager: resumeTopActivitiesLocked(): target Stack:ActivityStack{43280bb8 stackId=0, 1 tasks}
+01-25 19:20:01.612 1252-1290/? D/ActivityManager: resumeTopActivityLocked: Going to sleep and all paused
+01-25 19:20:01.612 1252-1298/? W/PackageManager: Couldn't delete native library directory /data/app-lib/io.realm.test
+01-25 19:20:01.932 293-293/? D/keystore: calling clear_uid in state: 2
+01-25 19:20:01.932 1252-1298/? I/ActivityManager: Force stopping io.realm.test appid=10217 user=0: pkg removed
+01-25 19:20:01.932 1252-1298/? I/ActivityManager: resumeTopActivitiesLocked(): target Stack:ActivityStack{43280bb8 stackId=0, 1 tasks}
+01-25 19:20:01.932 1252-1298/? D/ActivityManager: resumeTopActivityLocked: Going to sleep and all paused
+01-25 19:20:01.952 1451-1451/? D/KeyguardModel: mPackageIntentReceiver, received action: android.intent.action.PACKAGE_REMOVED, sendingUserId:0
+01-25 19:20:01.952 1998-1998/? I/[LGHome]EVENT: [LauncherModel.java:1177:onReceive()]onReceive intent=Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.realm.test flg=0x4000010 (has extras) }

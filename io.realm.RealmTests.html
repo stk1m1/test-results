@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">25.314s</div>
+<div class="counter">7.911s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">99%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,25 +54,62 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="internalRealmChangedHandlersRemoved"></a>
+<h3 class="failures">internalRealmChangedHandlersRemoved</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:645)
+at org.junit.Assert.assertEquals(Assert.java:631)
+at io.realm.RealmTests.internalRealmChangedHandlersRemoved(RealmTests.java:205)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1897)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
 <tr>
 <th>Test</th>
-<th>LG-F320S - 4.4.2</th>
+<th>PREVIEW - Google Nexus 5X - 6.0.0 - API 23 - 1080x1920 - 6.0</th>
 </tr>
 </thead>
 <tr>
 <td>allObjects</td>
-<td class="success">passed (0.106s)</td>
+<td class="success">passed (0.054s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted</td>
-<td class="success">passed (0.079s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_failures</td>
@@ -80,223 +117,223 @@
 </tr>
 <tr>
 <td>allObjectsSorted_singleField</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_twoFields</td>
-<td class="success">passed (0.107s)</td>
+<td class="success">passed (0.051s)</td>
 </tr>
 <tr>
 <td>beginTransaction</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>callMutableMethodOutsideTransaction</td>
-<td class="success">passed (0.083s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>cancelTransaction</td>
-<td class="success">passed (0.106s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>checkIfValid</td>
-<td class="success">passed (0.052s)</td>
+<td class="success">passed (0.056s)</td>
 </tr>
 <tr>
 <td>clear_all</td>
-<td class="success">passed (0.082s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>clear_type</td>
-<td class="success">passed (0.104s)</td>
+<td class="success">passed (0.078s)</td>
 </tr>
 <tr>
 <td>closeRealmInChangeListener</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject</td>
-<td class="success">passed (0.595s)</td>
+<td class="success">passed (0.085s)</td>
 </tr>
 <tr>
 <td>closeRealmInChangeListenerWhenThereIsListenerOnObject</td>
-<td class="success">passed (0.189s)</td>
-</tr>
-<tr>
-<td>closeRealmInChangeListenerWhenThereIsListenerOnResults</td>
-<td class="success">passed (0.245s)</td>
-</tr>
-<tr>
-<td>close_differentThread</td>
-<td class="success">passed (0.078s)</td>
-</tr>
-<tr>
-<td>closingRealmWhileOtherThreadIsOpeningRealm</td>
-<td class="success">passed (0.164s)</td>
-</tr>
-<tr>
-<td>columnIndicesIsPopulatedWhenSkippingInitialization</td>
-<td class="success">passed (0.105s)</td>
-</tr>
-<tr>
-<td>commitTransaction</td>
-<td class="success">passed (0.054s)</td>
-</tr>
-<tr>
-<td>commitTransaction_afterCancelTransaction</td>
-<td class="success">passed (0.051s)</td>
-</tr>
-<tr>
-<td>commitTransaction_twice</td>
-<td class="success">passed (0.056s)</td>
-</tr>
-<tr>
-<td>compactRealm</td>
-<td class="success">passed (0.106s)</td>
-</tr>
-<tr>
-<td>compactRealm_emptyRealm</td>
 <td class="success">passed (0.113s)</td>
 </tr>
 <tr>
-<td>compactRealm_encryptedEmptyRealm</td>
-<td class="success">passed (0.140s)</td>
+<td>closeRealmInChangeListenerWhenThereIsListenerOnResults</td>
+<td class="success">passed (0.084s)</td>
 </tr>
 <tr>
-<td>compactRealm_encryptedPopulatedRealm</td>
-<td class="success">passed (0.187s)</td>
+<td>close_differentThread</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>compactRealm_failsIfOpen</td>
-<td class="success">passed (0.082s)</td>
+<td>closingRealmWhileOtherThreadIsOpeningRealm</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
-<td>compactRealm_populatedRealm</td>
-<td class="success">passed (0.238s)</td>
-</tr>
-<tr>
-<td>contains</td>
-<td class="success">passed (0.192s)</td>
-</tr>
-<tr>
-<td>copyFromRealm</td>
-<td class="success">passed (0.077s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_checkMaxDepth</td>
-<td class="success">passed (0.081s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_cyclicObjectGraph</td>
-<td class="success">passed (0.056s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_dynamicRealmListThrows</td>
-<td class="success">passed (0.139s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_dynamicRealmObjectThrows</td>
-<td class="success">passed (0.086s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_invalidDepthThrows</td>
-<td class="success">passed (0.079s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_invalidObjectThrows</td>
-<td class="success">passed (0.077s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_list_invalidDepthThrows</td>
-<td class="success">passed (0.078s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_list_invalidListThrows</td>
-<td class="success">passed (0.277s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_list_sameElements</td>
-<td class="success">passed (0.056s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_newCopyEachTime</td>
-<td class="success">passed (0.107s)</td>
-</tr>
-<tr>
-<td>copyFromRealm_sameObjectDifferentDepths</td>
+<td>columnIndicesIsPopulatedWhenSkippingInitialization</td>
 <td class="success">passed (0.083s)</td>
 </tr>
 <tr>
-<td>copyToRealm</td>
-<td class="success">passed (0.079s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_addNewObjects</td>
-<td class="success">passed (0.160s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_cyclicObject</td>
-<td class="success">passed (0.137s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_defaultValuesOverrideExistingData</td>
-<td class="success">passed (0.083s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_iterable</td>
-<td class="success">passed (0.081s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_iterableChildObjects</td>
-<td class="success">passed (0.082s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_noPrimaryKeyField</td>
-<td class="success">passed (0.080s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_null</td>
-<td class="success">passed (0.088s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_primaryKeyFieldIsNull</td>
-<td class="success">passed (0.053s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_primaryKeyMixInObjectGraph</td>
-<td class="success">passed (0.082s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_referencesNotDeleted</td>
-<td class="success">passed (0.105s)</td>
-</tr>
-<tr>
-<td>copyToRealmOrUpdate_updateExistingObject</td>
-<td class="success">passed (0.051s)</td>
-</tr>
-<tr>
-<td>copyToRealm_convertsNullToDefaultValue</td>
+<td>commitTransaction</td>
 <td class="success">passed (0.055s)</td>
 </tr>
 <tr>
+<td>commitTransaction_afterCancelTransaction</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>commitTransaction_twice</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>compactRealm</td>
+<td class="success">passed (0.059s)</td>
+</tr>
+<tr>
+<td>compactRealm_emptyRealm</td>
+<td class="success">passed (0.104s)</td>
+</tr>
+<tr>
+<td>compactRealm_encryptedEmptyRealm</td>
+<td class="success">passed (0.113s)</td>
+</tr>
+<tr>
+<td>compactRealm_encryptedPopulatedRealm</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>compactRealm_failsIfOpen</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>compactRealm_populatedRealm</td>
+<td class="success">passed (0.053s)</td>
+</tr>
+<tr>
+<td>contains</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>copyFromRealm</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_checkMaxDepth</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_cyclicObjectGraph</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_dynamicRealmListThrows</td>
+<td class="success">passed (0.084s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_dynamicRealmObjectThrows</td>
+<td class="success">passed (0.058s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_invalidDepthThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_invalidObjectThrows</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_list_invalidDepthThrows</td>
+<td class="success">passed (0.058s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_list_invalidListThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_list_sameElements</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_newCopyEachTime</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>copyFromRealm_sameObjectDifferentDepths</td>
+<td class="success">passed (0.087s)</td>
+</tr>
+<tr>
+<td>copyToRealm</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_addNewObjects</td>
+<td class="success">passed (0.053s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_cyclicObject</td>
+<td class="success">passed (0.055s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_defaultValuesOverrideExistingData</td>
+<td class="success">passed (0.057s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_iterable</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_iterableChildObjects</td>
+<td class="success">passed (0.056s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_noPrimaryKeyField</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_null</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_primaryKeyFieldIsNull</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_primaryKeyMixInObjectGraph</td>
+<td class="success">passed (0.085s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_referencesNotDeleted</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>copyToRealmOrUpdate_updateExistingObject</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>copyToRealm_convertsNullToDefaultValue</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
 <td>copyToRealm_cyclicListReferences</td>
-<td class="success">passed (0.086s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>copyToRealm_cyclicObjectReferences</td>
-<td class="success">passed (0.086s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>copyToRealm_doNotCopyReferencedObjectIfManaged</td>
-<td class="success">passed (0.077s)</td>
+<td class="success">passed (0.082s)</td>
 </tr>
 <tr>
 <td>copyToRealm_fromOtherRealm</td>
-<td class="success">passed (0.107s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>copyToRealm_list</td>
-<td class="success">passed (0.085s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>copyToRealm_managedObject</td>
@@ -304,198 +341,198 @@
 </tr>
 <tr>
 <td>copyToRealm_null</td>
-<td class="success">passed (0.081s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>copyToRealm_primaryKeyIsNull</td>
-<td class="success">passed (0.215s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>copyToRealm_primaryKeyIsSetDirectly</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>createObject_cannotCreateDynamicRealmObject</td>
-<td class="success">passed (0.052s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>deleteRealm</td>
-<td class="success">passed (0.109s)</td>
+<td class="success">passed (0.077s)</td>
 </tr>
 <tr>
 <td>deleteRealm_failures</td>
-<td class="success">passed (0.106s)</td>
+<td class="success">passed (0.062s)</td>
 </tr>
 <tr>
 <td>distinct</td>
-<td class="success">passed (1.251s)</td>
+<td class="success">passed (0.284s)</td>
 </tr>
 <tr>
 <td>distinct_invalidTypeThrows</td>
-<td class="success">passed (0.083s)</td>
+<td class="success">passed (0.056s)</td>
 </tr>
 <tr>
 <td>distinct_noneIndexedFieldsThrows</td>
-<td class="success">passed (1.240s)</td>
+<td class="success">passed (0.256s)</td>
 </tr>
 <tr>
 <td>distinct_nullValues</td>
-<td class="success">passed (0.875s)</td>
+<td class="success">passed (0.242s)</td>
 </tr>
 <tr>
 <td>distinct_unknownFieldThrows</td>
-<td class="success">passed (1.240s)</td>
+<td class="success">passed (0.191s)</td>
 </tr>
 <tr>
 <td>executeTransaction_cancelInsideClosureThrowsException</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>executeTransaction_canceled</td>
-<td class="success">passed (0.055s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>executeTransaction_null</td>
-<td class="success">passed (0.078s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>executeTransaction_success</td>
-<td class="success">passed (0.054s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>get</td>
-<td class="success">passed (0.083s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>getInstance</td>
-<td class="success">passed (0.054s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>getInstance_differentEncryptionKeys</td>
-<td class="success">passed (0.159s)</td>
-</tr>
-<tr>
-<td>getInstance_nullContext</td>
-<td class="success">passed (0.197s)</td>
-</tr>
-<tr>
-<td>getInstance_nullDir</td>
-<td class="success">passed (0.083s)</td>
-</tr>
-<tr>
-<td>getInstance_referenceCounting</td>
-<td class="success">passed (0.131s)</td>
-</tr>
-<tr>
-<td>getInstance_referenceCounting_doubleClose</td>
-<td class="success">passed (0.077s)</td>
-</tr>
-<tr>
-<td>getInstance_writeProtectedDir</td>
-<td class="success">passed (0.050s)</td>
-</tr>
-<tr>
-<td>getInstance_writeProtectedFile</td>
-<td class="success">passed (0.080s)</td>
-</tr>
-<tr>
-<td>internalRealmChangedHandlersRemoved</td>
-<td class="success">passed (0.161s)</td>
-</tr>
-<tr>
-<td>isClosed</td>
-<td class="success">passed (0.082s)</td>
-</tr>
-<tr>
-<td>isClosed_differentThread</td>
-<td class="success">passed (0.079s)</td>
-</tr>
-<tr>
-<td>isEmpty</td>
-<td class="success">passed (0.134s)</td>
-</tr>
-<tr>
-<td>isInTransaction</td>
-<td class="success">passed (0.051s)</td>
-</tr>
-<tr>
-<td>methodCalledOnWrongThread</td>
 <td class="success">passed (0.055s)</td>
 </tr>
 <tr>
-<td>nestedTransaction</td>
+<td>getInstance_nullContext</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>getInstance_nullDir</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>getInstance_referenceCounting</td>
+<td class="success">passed (0.057s)</td>
+</tr>
+<tr>
+<td>getInstance_referenceCounting_doubleClose</td>
+<td class="success">passed (0.054s)</td>
+</tr>
+<tr>
+<td>getInstance_writeProtectedDir</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>getInstance_writeProtectedFile</td>
+<td class="success">passed (0.055s)</td>
+</tr>
+<tr>
+<td>internalRealmChangedHandlersRemoved</td>
+<td class="failures">failed (0.062s)</td>
+</tr>
+<tr>
+<td>isClosed</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
+<td>isClosed_differentThread</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>isEmpty</td>
 <td class="success">passed (0.081s)</td>
 </tr>
 <tr>
+<td>isInTransaction</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>methodCalledOnWrongThread</td>
+<td class="success">passed (0.054s)</td>
+</tr>
+<tr>
+<td>nestedTransaction</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
 <td>openRealmWhileTransactionInAnotherThread</td>
-<td class="success">passed (0.080s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>processLocalListenersAfterRefresh</td>
-<td class="success">passed (0.185s)</td>
+<td class="success">passed (0.083s)</td>
 </tr>
 <tr>
 <td>realmConfiguration_fileName</td>
-<td class="success">passed (0.741s)</td>
+<td class="success">passed (0.409s)</td>
 </tr>
 <tr>
 <td>refresh_insideTransactionThrows</td>
-<td class="success">passed (0.080s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>remove</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>removeAllChangeListenersThrowExceptionOnNonLooperThread</td>
-<td class="success">passed (0.194s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>removeChangeListenerThrowExceptionOnNonLooperThread</td>
-<td class="success">passed (0.082s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>setter_updateField</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>utf8Tests</td>
-<td class="success">passed (8.891s)</td>
+<td class="success">passed (2.156s)</td>
 </tr>
 <tr>
 <td>where</td>
-<td class="success">passed (0.084s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>where_equalTo_invalidFieldName</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>where_equalTo_requiredFieldWithNullArgument</td>
-<td class="success">passed (0.084s)</td>
+<td class="success">passed (0.056s)</td>
 </tr>
 <tr>
 <td>where_equalTo_wrongFieldTypeAsInput</td>
-<td class="success">passed (0.077s)</td>
+<td class="success">passed (0.104s)</td>
 </tr>
 <tr>
 <td>where_queryResults</td>
-<td class="success">passed (0.132s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>writeCopyTo</td>
-<td class="success">passed (0.162s)</td>
+<td class="success">passed (0.056s)</td>
 </tr>
 <tr>
 <td>writeEncryptedCopyTo</td>
-<td class="success">passed (0.648s)</td>
+<td class="success">passed (0.170s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 25, 2016 7:41:02 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 25, 2016 10:46:14 PM</p>
 </div>
 </div>
 </body>

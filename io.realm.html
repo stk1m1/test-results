@@ -21,19 +21,19 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1111</div>
+<div class="counter">1112</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5m36.02s</div>
+<div class="counter">1m12.59s</div>
 <p>duration</p>
 </div>
 </td>
@@ -42,8 +42,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">99%</div>
 <p>successful</p>
 </div>
 </td>
@@ -53,10 +53,50 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Classes</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Test</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">
+<a href="io.realm.DynamicRealmTests.html">DynamicRealmTests</a>
+</td>
+<td class="failures">
+<a href="io.realm.DynamicRealmTests.html#s">distinctAsync</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.RealmTest.html">RealmTest</a>
+</td>
+<td class="failures">
+<a href="io.realm.RealmTest.html#s">testInternalRealmChangedHandlersRemoved</a>
+</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="io.realm.RealmTests.html">RealmTests</a>
+</td>
+<td class="failures">
+<a href="io.realm.RealmTests.html#s">internalRealmChangedHandlersRemoved</a>
+</td>
+</tr>
+</table>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Classes</h2>
 <table>
 <thread>
@@ -74,7 +114,7 @@
 </td>
 <td>28</td>
 <td>0</td>
-<td>5.686s</td>
+<td>0.490s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -83,17 +123,17 @@
 </td>
 <td>29</td>
 <td>0</td>
-<td>3.220s</td>
+<td>0.513s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="io.realm.DynamicRealmTests.html">DynamicRealmTests</a>
 </td>
 <td>32</td>
-<td>0</td>
-<td>10.574s</td>
-<td class="success">100%</td>
+<td>1</td>
+<td>8.021s</td>
+<td class="failures">96%</td>
 </tr>
 <tr>
 <td class="success">
@@ -101,7 +141,7 @@
 </td>
 <td>6</td>
 <td>0</td>
-<td>0.140s</td>
+<td>0.052s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -110,7 +150,7 @@
 </td>
 <td>4</td>
 <td>0</td>
-<td>0.025s</td>
+<td>0s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -119,7 +159,7 @@
 </td>
 <td>18</td>
 <td>0</td>
-<td>5.557s</td>
+<td>3.527s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -128,7 +168,7 @@
 </td>
 <td>13</td>
 <td>0</td>
-<td>2.435s</td>
+<td>0.195s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -137,16 +177,16 @@
 </td>
 <td>13</td>
 <td>0</td>
-<td>2.566s</td>
+<td>0.222s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success">
 <a href="io.realm.RealmAsyncQueryTests.html">RealmAsyncQueryTests</a>
 </td>
-<td>31</td>
+<td>32</td>
 <td>0</td>
-<td>13.596s</td>
+<td>4.340s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -155,7 +195,7 @@
 </td>
 <td>10</td>
 <td>0</td>
-<td>0.867s</td>
+<td>0.218s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -164,7 +204,7 @@
 </td>
 <td>38</td>
 <td>0</td>
-<td>1.128s</td>
+<td>0.420s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -173,7 +213,7 @@
 </td>
 <td>6</td>
 <td>0</td>
-<td>0.614s</td>
+<td>0.248s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -182,7 +222,7 @@
 </td>
 <td>3</td>
 <td>0</td>
-<td>2.551s</td>
+<td>1.249s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -191,7 +231,7 @@
 </td>
 <td>58</td>
 <td>0</td>
-<td>5.910s</td>
+<td>1.456s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -200,7 +240,7 @@
 </td>
 <td>21</td>
 <td>0</td>
-<td>2.806s</td>
+<td>0.439s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -209,7 +249,7 @@
 </td>
 <td>66</td>
 <td>0</td>
-<td>6.096s</td>
+<td>1.408s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -218,7 +258,7 @@
 </td>
 <td>74</td>
 <td>0</td>
-<td>9.533s</td>
+<td>1.736s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -227,7 +267,7 @@
 </td>
 <td>15</td>
 <td>0</td>
-<td>3.453s</td>
+<td>0.809s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -236,7 +276,7 @@
 </td>
 <td>31</td>
 <td>0</td>
-<td>4.640s</td>
+<td>0.706s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -245,7 +285,7 @@
 </td>
 <td>45</td>
 <td>0</td>
-<td>4.343s</td>
+<td>1.274s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -254,7 +294,7 @@
 </td>
 <td>45</td>
 <td>0</td>
-<td>5.250s</td>
+<td>1.367s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -263,7 +303,7 @@
 </td>
 <td>97</td>
 <td>0</td>
-<td>26.734s</td>
+<td>3.900s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -272,7 +312,7 @@
 </td>
 <td>6</td>
 <td>0</td>
-<td>0.572s</td>
+<td>0.080s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -281,7 +321,7 @@
 </td>
 <td>71</td>
 <td>0</td>
-<td>1m22.09s</td>
+<td>10.201s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -290,7 +330,7 @@
 </td>
 <td>70</td>
 <td>0</td>
-<td>1m18.28s</td>
+<td>11.761s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -299,26 +339,26 @@
 </td>
 <td>10</td>
 <td>0</td>
-<td>0.757s</td>
+<td>0.358s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="io.realm.RealmTest.html">RealmTest</a>
 </td>
 <td>111</td>
-<td>0</td>
-<td>26.342s</td>
-<td class="success">100%</td>
+<td>1</td>
+<td>7.873s</td>
+<td class="failures">99%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="io.realm.RealmTests.html">RealmTests</a>
 </td>
 <td>106</td>
-<td>0</td>
-<td>25.314s</td>
-<td class="success">100%</td>
+<td>1</td>
+<td>7.911s</td>
+<td class="failures">99%</td>
 </tr>
 <tr>
 <td class="success">
@@ -326,7 +366,7 @@
 </td>
 <td>15</td>
 <td>0</td>
-<td>1.272s</td>
+<td>0.473s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -335,7 +375,7 @@
 </td>
 <td>6</td>
 <td>0</td>
-<td>0.409s</td>
+<td>0.168s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -344,7 +384,7 @@
 </td>
 <td>33</td>
 <td>0</td>
-<td>3.253s</td>
+<td>1.174s</td>
 <td class="success">100%</td>
 </tr>
 </table>
@@ -352,7 +392,7 @@
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 25, 2016 7:41:02 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 25, 2016 10:46:14 PM</p>
 </div>
 </div>
 </body>

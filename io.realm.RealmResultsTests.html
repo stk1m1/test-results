@@ -22,19 +22,19 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">77</div>
+<div class="counter">76</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m48.19s</div>
+<div class="counter">18.134s</div>
 <p>duration</p>
 </div>
 </td>
@@ -44,7 +44,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">97%</div>
+<div class="percent">98%</div>
 <p>successful</p>
 </div>
 </td>
@@ -66,47 +66,44 @@
 <a name="distinctAsync"></a>
 <h3 class="failures">distinctAsync</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;25&gt; but was:&lt;6250&gt;
-at org.junit.Assert.fail(Assert.java:88)
-at org.junit.Assert.failNotEquals(Assert.java:834)
-at org.junit.Assert.assertEquals(Assert.java:645)
-at org.junit.Assert.assertEquals(Assert.java:631)
-at io.realm.RealmResultsTests$2$4.onChange(RealmResultsTests.java:1510)
-at io.realm.RealmResults.notifyChangeListeners(RealmResults.java:985)
-at io.realm.HandlerController.completedAsyncRealmResults(HandlerController.java:375)
-at io.realm.HandlerController.handleMessage(HandlerController.java:105)
-at android.os.Handler.dispatchMessage(Handler.java:98)
-at android.os.Looper.loop(Looper.java:136)
-at io.realm.RealmResultsTests$2.run(RealmResultsTests.java:1515)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
-at java.lang.Thread.run(Thread.java:841)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="distinctAsync_withNull"></a>
-<h3 class="failures">distinctAsync_withNull</h3>
-<span class="code">
-<pre>java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;6250&gt;
-at org.junit.Assert.fail(Assert.java:88)
-at org.junit.Assert.failNotEquals(Assert.java:834)
-at org.junit.Assert.assertEquals(Assert.java:645)
-at org.junit.Assert.assertEquals(Assert.java:631)
-at io.realm.RealmResultsTests$3$2.onChange(RealmResultsTests.java:1580)
-at io.realm.RealmResults.notifyChangeListeners(RealmResults.java:985)
-at io.realm.HandlerController.completedAsyncRealmResults(HandlerController.java:375)
-at io.realm.HandlerController.handleMessage(HandlerController.java:105)
-at android.os.Handler.dispatchMessage(Handler.java:98)
-at android.os.Looper.loop(Looper.java:136)
-at io.realm.RealmResultsTests$3.run(RealmResultsTests.java:1585)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
-at java.lang.Thread.run(Thread.java:841)
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:666)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:660)
+at io.realm.TestHelper.exitOrThrow(TestHelper.java:685)
+at io.realm.RealmResultsTests.distinctAsync(RealmResultsTests.java:1539)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
 </pre>
 </span>
 </div>
@@ -117,323 +114,319 @@ at java.lang.Thread.run(Thread.java:841)
 <thead>
 <tr>
 <th>Test</th>
-<th>LG-F320S - 4.4.2</th>
+<th>PREVIEW - Google Nexus 5X - 6.0.0 - API 23 - 1080x1920 - 6.0</th>
 </tr>
 </thead>
 <tr>
 <td>avg</td>
-<td class="success">passed (1.165s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>avg_emptyNonNullFields</td>
-<td class="success">passed (0.953s)</td>
+<td class="success">passed (0.144s)</td>
 </tr>
 <tr>
 <td>avg_emptyNullFields</td>
-<td class="success">passed (1.087s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>avg_partialNullRows</td>
-<td class="success">passed (1.078s)</td>
+<td class="success">passed (0.133s)</td>
 </tr>
 <tr>
 <td>clear</td>
-<td class="success">passed (1.717s)</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
 <td>contains_realmObjectFromOtherRealm</td>
-<td class="success">passed (1.908s)</td>
+<td class="success">passed (0.218s)</td>
 </tr>
 <tr>
 <td>count</td>
-<td class="success">passed (1.016s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>distinct</td>
-<td class="success">passed (2.266s)</td>
+<td class="success">passed (0.280s)</td>
 </tr>
 <tr>
 <td>distinctAsync</td>
-<td class="failures">failed (8.044s)</td>
+<td class="failures">failed (7.107s)</td>
 </tr>
 <tr>
 <td>distinctAsync_doesNotExist</td>
-<td class="success">passed (2.138s)</td>
+<td class="success">passed (0.288s)</td>
 </tr>
 <tr>
 <td>distinctAsync_indexedLinkedFields</td>
-<td class="success">passed (2.281s)</td>
+<td class="success">passed (0.279s)</td>
 </tr>
 <tr>
 <td>distinctAsync_invalidTypes</td>
-<td class="success">passed (1.695s)</td>
+<td class="success">passed (0.194s)</td>
 </tr>
 <tr>
 <td>distinctAsync_notIndexedFields</td>
-<td class="success">passed (2.305s)</td>
+<td class="success">passed (0.279s)</td>
 </tr>
 <tr>
 <td>distinctAsync_notIndexedLinkedFields</td>
-<td class="success">passed (0.987s)</td>
-</tr>
-<tr>
-<td>distinctAsync_withNull</td>
-<td class="failures">failed (8.057s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>distinct_indexedLinkedFields</td>
-<td class="success">passed (1.897s)</td>
+<td class="success">passed (0.231s)</td>
 </tr>
 <tr>
 <td>distinct_invalidTypesLinkedFields</td>
-<td class="success">passed (1.078s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>distinct_noneExistingField</td>
-<td class="success">passed (2.099s)</td>
+<td class="success">passed (0.254s)</td>
 </tr>
 <tr>
 <td>distinct_noneIndexedFields</td>
-<td class="success">passed (1.981s)</td>
+<td class="success">passed (0.299s)</td>
 </tr>
 <tr>
 <td>distinct_notIndexedLinkedFields</td>
-<td class="success">passed (1.700s)</td>
+<td class="success">passed (0.231s)</td>
 </tr>
 <tr>
 <td>distinct_withNull</td>
-<td class="success">passed (2.122s)</td>
+<td class="success">passed (0.229s)</td>
 </tr>
 <tr>
 <td>findFirst</td>
-<td class="success">passed (0.921s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>first</td>
-<td class="success">passed (0.930s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>firstAndLast_throwsIfEmpty</td>
-<td class="success">passed (1.093s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>get</td>
-<td class="success">passed (1.041s)</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
 <td>indexOf</td>
-<td class="success">passed (1.071s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>isValid</td>
-<td class="success">passed (1.183s)</td>
+<td class="success">passed (0.145s)</td>
 </tr>
 <tr>
 <td>last</td>
-<td class="success">passed (0.971s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>max</td>
-<td class="success">passed (2.291s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>max_emptyNonNullFields</td>
-<td class="success">passed (0.863s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>max_emptyNullFields</td>
-<td class="success">passed (1.063s)</td>
+<td class="success">passed (0.115s)</td>
 </tr>
 <tr>
 <td>max_partialNullRows</td>
-<td class="success">passed (1.179s)</td>
+<td class="success">passed (0.115s)</td>
 </tr>
 <tr>
 <td>methodsThrowOnWrongThread</td>
-<td class="success">passed (1.054s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>min</td>
-<td class="success">passed (1.485s)</td>
+<td class="success">passed (0.118s)</td>
 </tr>
 <tr>
 <td>min_emptyNonNullFields</td>
-<td class="success">passed (1.388s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>min_emptyNullFields</td>
-<td class="success">passed (0.905s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>min_partialNullRows</td>
-<td class="success">passed (0.949s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>mutableMethodsOutsideTransactions</td>
-<td class="success">passed (0.975s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>remove</td>
-<td class="success">passed (0.938s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>removeLast</td>
-<td class="success">passed (0.981s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>removeLast_emptyList</td>
-<td class="success">passed (1.019s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>setter_nullValueInNullableField</td>
-<td class="success">passed (0.932s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>setter_nullValueInRequiredField</td>
-<td class="success">passed (0.945s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>sort_boolean</td>
-<td class="success">passed (1.075s)</td>
+<td class="success">passed (0.168s)</td>
 </tr>
 <tr>
 <td>sort_danishCharacters</td>
-<td class="success">passed (1.193s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>sort_date</td>
-<td class="success">passed (1.049s)</td>
+<td class="success">passed (0.146s)</td>
 </tr>
 <tr>
 <td>sort_double</td>
-<td class="success">passed (1.004s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>sort_emptyResults</td>
-<td class="success">passed (1.014s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>sort_float</td>
-<td class="success">passed (0.918s)</td>
+<td class="success">passed (0.116s)</td>
 </tr>
 <tr>
 <td>sort_greekCharacters</td>
-<td class="success">passed (0.876s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>sort_long</td>
-<td class="success">passed (0.971s)</td>
+<td class="success">passed (0.136s)</td>
 </tr>
 <tr>
 <td>sort_manyDifferentCharacters</td>
-<td class="success">passed (1.045s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>sort_nonExistingColumn</td>
-<td class="success">passed (0.992s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>sort_nullArguments</td>
-<td class="success">passed (1.069s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>sort_rowsWithPartialNullValues</td>
-<td class="success">passed (1.181s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>sort_russianCharacters</td>
-<td class="success">passed (1.115s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>sort_singleField</td>
-<td class="success">passed (1.008s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>sort_string</td>
-<td class="success">passed (0.935s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>sort_twoLanguages</td>
-<td class="success">passed (1.014s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>sort_usingChildObject</td>
-<td class="success">passed (1.078s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>subList</td>
-<td class="success">passed (1.222s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>sum</td>
-<td class="success">passed (1.998s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>sum_nonLatinColumnNames</td>
-<td class="success">passed (1.043s)</td>
+<td class="success">passed (0.116s)</td>
 </tr>
 <tr>
 <td>sum_nullRows</td>
-<td class="success">passed (1.039s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>sum_partialNullRows</td>
-<td class="success">passed (1.287s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>testDistinctInvalidTypes</td>
-<td class="success">passed (1.867s)</td>
+<td class="success">passed (0.221s)</td>
 </tr>
 <tr>
 <td>unsupportedMethods</td>
-<td class="success">passed (0.839s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>verifyArmComparisons</td>
-<td class="success">passed (1.047s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>where</td>
-<td class="success">passed (1.019s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>where_contains</td>
-<td class="success">passed (1.020s)</td>
+<td class="success">passed (0.119s)</td>
 </tr>
 <tr>
 <td>where_contains_null</td>
-<td class="success">passed (1.020s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>where_equalTo_manyConditions</td>
-<td class="success">passed (0.986s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>where_findAllSorted</td>
-<td class="success">passed (0.846s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>where_findAll_size</td>
-<td class="success">passed (0.963s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>where_lessThanGreaterThan</td>
-<td class="success">passed (0.845s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>where_queryDateField</td>
-<td class="success">passed (1.022s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>where_shouldNotContainRemovedItem</td>
-<td class="success">passed (0.837s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 26, 2016 7:28:42 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 26, 2016 8:16:27 PM</p>
 </div>
 </div>
 </body>

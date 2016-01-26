@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.021s</div>
+<div class="counter">9.772s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">96%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,255 +54,152 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="distinctAsync"></a>
-<h3 class="failures">distinctAsync</h3>
-<span class="code">
-<pre>java.lang.AssertionError: after() threw an error that shadows a test case error
-== Test case exception ==
-junit.framework.AssertionFailedError: Test took longer than 7 seconds
-at junit.framework.Assert.fail(Assert.java:50)
-at io.realm.TestHelper.awaitOrFail(TestHelper.java:666)
-at io.realm.TestHelper.awaitOrFail(TestHelper.java:660)
-at io.realm.TestHelper.exitOrThrow(TestHelper.java:685)
-at io.realm.rule.RunInLooperThread$1.evaluate(RunInLooperThread.java:116)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
-
-== after() exception ==
-java.lang.IllegalStateException: It's not allowed to delete the file associated with an open Realm. Remember to close() all the instances of the Realm before deleting its file: /data/data/io.realm.test/cache/junit-861655957/default.realm
-at io.realm.BaseRealm$1.onResult(BaseRealm.java:577)
-at io.realm.RealmCache.invokeWithGlobalRefCount(RealmCache.java:249)
-at io.realm.BaseRealm.deleteRealm(BaseRealm.java:572)
-at io.realm.Realm.deleteRealm(Realm.java:1244)
-at io.realm.rule.TestRealmConfigurationFactory.after(TestRealmConfigurationFactory.java:69)
-at io.realm.rule.RunInLooperThread.after(RunInLooperThread.java:70)
-at io.realm.rule.RunInLooperThread$1.evaluate(RunInLooperThread.java:123)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
-
-at org.junit.Assert.fail(Assert.java:88)
-at io.realm.rule.RunInLooperThread$1.evaluate(RunInLooperThread.java:142)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
 <tr>
 <th>Test</th>
-<th>PREVIEW - Google Nexus 5X - 6.0.0 - API 23 - 1080x1920 - 6.0</th>
+<th>LG-F320S - 4.4.2</th>
 </tr>
 </thead>
 <tr>
 <td>accessingDynamicRealmObjectBeforeAsyncQueryCompleted</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0.254s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.279s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_failures</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.054s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_singleField</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.080s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_sortTwoFields</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.083s)</td>
 </tr>
 <tr>
 <td>allObjectsSorted_wrongFieldName</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.085s)</td>
 </tr>
 <tr>
 <td>clear</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.274s)</td>
 </tr>
 <tr>
 <td>clear_all</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.086s)</td>
 </tr>
 <tr>
 <td>clear_invalidName</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.083s)</td>
 </tr>
 <tr>
 <td>clear_outsideTransactionClearOutsideTransactionThrows</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.221s)</td>
 </tr>
 <tr>
 <td>createObject</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.083s)</td>
 </tr>
 <tr>
 <td>createObject_illegalPrimaryKeyValue</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.052s)</td>
 </tr>
 <tr>
 <td>createObject_withPrimaryKey</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.058s)</td>
 </tr>
 <tr>
 <td>deleteRealm_ThrowsIfDynamicRealmIsOpen</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>deleteRealm_throwsIfTypedRealmIsOpen</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.276s)</td>
 </tr>
 <tr>
 <td>distinct</td>
-<td class="success">passed (0.227s)</td>
+<td class="success">passed (1.424s)</td>
 </tr>
 <tr>
 <td>distinctAsync</td>
-<td class="failures">failed (7.026s)</td>
+<td class="success">passed (1.968s)</td>
 </tr>
 <tr>
 <td>distinct_invalidClassNames</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.059s)</td>
 </tr>
 <tr>
 <td>distinct_invalidFieldNames</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.274s)</td>
 </tr>
 <tr>
 <td>distinct_invalidTypes</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.054s)</td>
 </tr>
 <tr>
 <td>distinct_notIndexedFields</td>
-<td class="success">passed (0.222s)</td>
+<td class="success">passed (1.608s)</td>
 </tr>
 <tr>
 <td>executeTransaction</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.084s)</td>
 </tr>
 <tr>
 <td>executeTransaction_cancelled</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.224s)</td>
 </tr>
 <tr>
 <td>executeTransaction_null</td>
-<td class="success">passed (0.001s)</td>
+<td class="success">passed (0.187s)</td>
 </tr>
 <tr>
 <td>executeTransaction_warningIfManuallyCancelled</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.086s)</td>
 </tr>
 <tr>
 <td>findAllAsync</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.223s)</td>
 </tr>
 <tr>
 <td>findAllSortedAsync</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.201s)</td>
 </tr>
 <tr>
 <td>findAllSortedAsync_usingMultipleFields</td>
-<td class="success">passed (0.055s)</td>
+<td class="success">passed (0.449s)</td>
 </tr>
 <tr>
 <td>findFirstAsync</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.228s)</td>
 </tr>
 <tr>
 <td>realmListRemoveAllFromRealm</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.312s)</td>
 </tr>
 <tr>
 <td>separateSharedGroups</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.089s)</td>
 </tr>
 <tr>
 <td>where</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.226s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 25, 2016 10:46:14 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 26, 2016 7:28:42 PM</p>
 </div>
 </div>
 </body>

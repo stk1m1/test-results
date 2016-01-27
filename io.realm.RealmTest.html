@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">5</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.751s</div>
+<div class="counter">32.776s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">95%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,10 +54,222 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testCloseRealmInChangeListener"></a>
+<h3 class="failures">testCloseRealmInChangeListener</h3>
+<span class="code">
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:668)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:662)
+at io.realm.RealmTest.testCloseRealmInChangeListener(RealmTest.java:2677)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject"></a>
+<h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject</h3>
+<span class="code">
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:668)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:662)
+at io.realm.RealmTest.testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject(RealmTest.java:2733)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testCloseRealmInChangeListenerWhenThereIsListenerOnObject"></a>
+<h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnObject</h3>
+<span class="code">
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:668)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:662)
+at io.realm.RealmTest.testCloseRealmInChangeListenerWhenThereIsListenerOnObject(RealmTest.java:2791)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testCloseRealmInChangeListenerWhenThereIsListenerOnResults"></a>
+<h3 class="failures">testCloseRealmInChangeListenerWhenThereIsListenerOnResults</h3>
+<span class="code">
+<pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
+at junit.framework.Assert.fail(Assert.java:50)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:668)
+at io.realm.TestHelper.awaitOrFail(TestHelper.java:662)
+at io.realm.RealmTest.testCloseRealmInChangeListenerWhenThereIsListenerOnResults(RealmTest.java:2848)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testInternalRealmChangedHandlersRemoved"></a>
+<h3 class="failures">testInternalRealmChangedHandlersRemoved</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:645)
+at org.junit.Assert.assertEquals(Assert.java:631)
+at io.realm.RealmTest.testInternalRealmChangedHandlersRemoved(RealmTest.java:212)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
+at android.support.test.internal.statement.UiThreadStatement$1.run(UiThreadStatement.java:44)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:1897)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -68,27 +280,27 @@
 </thead>
 <tr>
 <td>testAllObjectsSorted</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testBeginTransaction</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCancelTransaction</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCannotCreateDynamicRealmObject</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCannotRefreshInTransaction</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
+<td>testCannotRefreshInTransaction</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
 <td>testCheckValid</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testClear</td>
@@ -96,11 +308,11 @@
 </tr>
 <tr>
 <td>testClearAll</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testClearAllCalledOutsideTransaction</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testClearAllInWrongThreadShouldThrow</td>
@@ -108,59 +320,59 @@
 </tr>
 <tr>
 <td>testCloseRealmInChangeListener</td>
-<td class="success">passed (0.027s)</td>
+<td class="failures">failed (7.023s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnEmptyObject</td>
-<td class="success">passed (0s)</td>
+<td class="failures">failed (7.016s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnObject</td>
-<td class="success">passed (0.028s)</td>
+<td class="failures">failed (7.032s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInChangeListenerWhenThereIsListenerOnResults</td>
-<td class="success">passed (0.026s)</td>
+<td class="failures">failed (7.031s)</td>
 </tr>
 <tr>
 <td>testCloseRealmInDifferentThread</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testClosingRealmWhileOtherThreadIsOpeningRealm</td>
-<td class="success">passed (0.116s)</td>
-</tr>
-<tr>
-<td>testColumnIndicesIsPopulatedWhenSkippingInitialization</td>
-<td class="success">passed (0.056s)</td>
-</tr>
-<tr>
-<td>testCommitTransaction</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testCommitTransactionAfterCancelTransaction</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
+<td>testClosingRealmWhileOtherThreadIsOpeningRealm</td>
+<td class="success">passed (0.112s)</td>
+</tr>
+<tr>
+<td>testColumnIndicesIsPopulatedWhenSkippingInitialization</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testCommitTransaction</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testCommitTransactionAfterCancelTransaction</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>testCompactEmptyRealmFile</td>
-<td class="success">passed (0.052s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCompactEncryptedEmptyRealmFile</td>
-<td class="success">passed (0.055s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCompactEncryptedPopulatedRealmFile</td>
-<td class="success">passed (0.056s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCompactPopulateRealmFile</td>
-<td class="success">passed (0.052s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testCompactRealmFileFailsIfOpen</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealm</td>
@@ -168,35 +380,35 @@
 </tr>
 <tr>
 <td>testCopyFromRealmCyclicObjectGraph</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>testCopyFromRealmDifferentObjects</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>testCopyFromRealmDifferentObjects</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
 <td>testCopyFromRealmDynamicRealmListThrows</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmDynamicRealmObjectThrows</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithDepth</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithDifferentDepths</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyFromRealmWithInvalidDepth</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyInvalidObjectFromRealmThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyListFromRealmSameElements</td>
@@ -204,35 +416,35 @@
 </tr>
 <tr>
 <td>testCopyListFromRealmWithInvalidDepth</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCopyListInvalidObjectFromRealmThrows</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCopyManagedObjectIsNoop</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCopyManagedObjectToOtherRealm</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>testCopyOrUpdateAddObject</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
+<td>testCopyListInvalidObjectFromRealmThrows</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testCopyManagedObjectIsNoop</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testCopyManagedObjectToOtherRealm</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testCopyOrUpdateAddObject</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
 <td>testCopyOrUpdateIterable</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateIterableChildObjects</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateNoPrimaryKeyThrows</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateObject</td>
@@ -240,91 +452,91 @@
 </tr>
 <tr>
 <td>testCopyOrUpdatePrimaryKeyMix</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateReferencesNotDeleted</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testCopyOrUpdateWithStandaloneDefaultObject</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmCyclic</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testCopyToRealmCyclicList</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testCopyToRealmDefaultValues</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>testCopyToRealmDontCopyNestedRealmObjects</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testCopyToRealmList</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testCopyToRealmNullObjectThrows</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testCopyToRealmObject</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testCopyToRealmOrUpdateNullPrimaryKeyThrows</td>
-<td class="success">passed (0.029s)</td>
+<td>testCopyToRealmDefaultValues</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testCopyToRealmOrUpdateNullThrows</td>
-<td class="success">passed (0s)</td>
+<td>testCopyToRealmDontCopyNestedRealmObjects</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testCopyToRealmWithPrimaryAsNullThrows</td>
+<td>testCopyToRealmList</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
-<td>testCopyToRealmWithPrimaryKeySetValueDirectly</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>testCreateFile</td>
-<td class="success">passed (0.195s)</td>
-</tr>
-<tr>
-<td>testDeleteNonRealmFile</td>
+<td>testCopyToRealmNullObjectThrows</td>
 <td class="success">passed (0.025s)</td>
 </tr>
 <tr>
-<td>testDeleteRealmFile</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testDistinct</td>
-<td class="success">passed (0.172s)</td>
-</tr>
-<tr>
-<td>testDistinctDoesNotExist</td>
-<td class="success">passed (0.172s)</td>
-</tr>
-<tr>
-<td>testDistinctInvalidTypes</td>
+<td>testCopyToRealmObject</td>
 <td class="success">passed (0.030s)</td>
 </tr>
 <tr>
+<td>testCopyToRealmOrUpdateNullPrimaryKeyThrows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testCopyToRealmOrUpdateNullThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testCopyToRealmWithPrimaryAsNullThrows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testCopyToRealmWithPrimaryKeySetValueDirectly</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testCreateFile</td>
+<td class="success">passed (0.185s)</td>
+</tr>
+<tr>
+<td>testDeleteNonRealmFile</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testDeleteRealmFile</td>
+<td class="success">passed (0.051s)</td>
+</tr>
+<tr>
+<td>testDistinct</td>
+<td class="success">passed (0.196s)</td>
+</tr>
+<tr>
+<td>testDistinctDoesNotExist</td>
+<td class="success">passed (0.164s)</td>
+</tr>
+<tr>
+<td>testDistinctInvalidTypes</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>testDistinctNotIndexedFields</td>
-<td class="success">passed (0.199s)</td>
+<td class="success">passed (0.164s)</td>
 </tr>
 <tr>
 <td>testDistinctWithNull</td>
-<td class="success">passed (0.138s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>testDoubleCommitThrows</td>
@@ -332,43 +544,43 @@
 </tr>
 <tr>
 <td>testExecuteTransactionCancel</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testExecuteTransactionCancelledInExecuteThrowsRuntimeException</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testExecuteTransactionCommit</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testExecuteTransactionNull</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testGetInstanceFileNoWritePermissionThrows</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testGetInstanceFolderNoWritePermissionThrows</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testGetInstanceNullFolderThrows</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testGetRealmAfterCompactRealm</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>testInternalRealmChangedHandlersRemoved</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
-<td>testIsEmpty</td>
+<td>testExecuteTransactionCancelledInExecuteThrowsRuntimeException</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testExecuteTransactionCommit</td>
 <td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testExecuteTransactionNull</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testGetInstanceFileNoWritePermissionThrows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testGetInstanceFolderNoWritePermissionThrows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testGetInstanceNullFolderThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testGetRealmAfterCompactRealm</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testInternalRealmChangedHandlersRemoved</td>
+<td class="failures">failed (0.029s)</td>
+</tr>
+<tr>
+<td>testIsEmpty</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testIsInTransaction</td>
@@ -380,43 +592,43 @@
 </tr>
 <tr>
 <td>testMutableMethodsOutsideTransactions</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testNestedTransaction</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testOpenRealmFileDeletionShouldThrow</td>
-<td class="success">passed (0.055s)</td>
-</tr>
-<tr>
-<td>testOpenRealmWhileTransactionInAnotherThread</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testOpeningOfEncryptedRealmWithDifferentKeyInstances</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testProcessLocalListenersAfterRefresh</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testQueriesFailWithInvalidDataTypes</td>
+<td>testOpenRealmFileDeletionShouldThrow</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
-<td>testQueriesFailWithNullQueryValue</td>
-<td class="success">passed (0.030s)</td>
+<td>testOpenRealmWhileTransactionInAnotherThread</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testQueriesResults</td>
+<td>testOpeningOfEncryptedRealmWithDifferentKeyInstances</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testProcessLocalListenersAfterRefresh</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testQueriesFailWithInvalidDataTypes</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testQueriesFailWithNullQueryValue</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>testQueriesWithDataTypes</td>
+<td>testQueriesResults</td>
 <td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testQueriesWithDataTypes</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testRealmIsClosed</td>
@@ -424,98 +636,98 @@
 </tr>
 <tr>
 <td>testRealmIsClosedInDifferentThread</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testReferenceCounting</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>testReferenceCountingDoubleClose</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testRemoveAllChangeListenersThrowExceptionOnNonLooperThread</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testRemoveChangeListenerThrowExceptionOnNonLooperThread</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testShouldContainTable</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>testShouldCreateRealm</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testShouldFailOutsideTransaction</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>testShouldGetObject</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>testShouldGetTable</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>testShouldNotFailCreateRealmWithNullContext</td>
-<td class="success">passed (0.001s)</td>
-</tr>
-<tr>
-<td>testShouldRemoveRow</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testShouldReturnResultSet</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testShouldReturnTableOrViewList</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>testSortMultiFailures</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>testSortSingleField</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testSortTwoFields</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>testUTF8</td>
-<td class="success">passed (1.494s)</td>
-</tr>
-<tr>
-<td>testUpdateCyclicObject</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>testUpdateObjectWithLinks</td>
+<td>testShouldNotFailCreateRealmWithNullContext</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testShouldRemoveRow</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>testShouldReturnResultSet</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>testShouldReturnTableOrViewList</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>testSortMultiFailures</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>testSortSingleField</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testSortTwoFields</td>
 <td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>testUTF8</td>
+<td class="success">passed (1.559s)</td>
+</tr>
+<tr>
+<td>testUpdateCyclicObject</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>testUpdateObjectWithLinks</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>testWriteCopyTo</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.053s)</td>
 </tr>
 <tr>
 <td>testWriteEncryptedCopy</td>
-<td class="success">passed (0.052s)</td>
+<td class="success">passed (0.053s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 26, 2016 10:07:04 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 27, 2016 9:26:42 PM</p>
 </div>
 </div>
 </body>

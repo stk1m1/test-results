@@ -34,7 +34,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">17.241s</div>
+<div class="counter">16.975s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,12 +66,13 @@
 <a name="distinctAsync"></a>
 <h3 class="failures">distinctAsync</h3>
 <span class="code">
-<pre>java.lang.RuntimeException: Not supported for tables
-at io.realm.internal.Table.sync(Table.java:1341)
-at io.realm.RealmResults.&lt;init&gt;(RealmResults.java:127)
-at io.realm.RealmResults.createFromTableOrView(RealmResults.java:89)
-at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1201)
-at io.realm.RealmQueryTest$3.run(RealmQueryTest.java:2093)
+<pre>java.lang.NullPointerException: Attempt to invoke virtual method 'io.realm.internal.TableView io.realm.internal.TableQuery.importHandoverTableView(long, long)' on a null object reference
+at io.realm.RealmResults.swapTableViewPointer(RealmResults.java:812)
+at io.realm.HandlerController.completedAsyncRealmResults(HandlerController.java:373)
+at io.realm.HandlerController.handleMessage(HandlerController.java:105)
+at android.os.Handler.dispatchMessage(Handler.java:98)
+at android.os.Looper.loop(Looper.java:148)
+at io.realm.RealmQueryTest$3.run(RealmQueryTest.java:2148)
 at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
 at java.util.concurrent.FutureTask.run(FutureTask.java:237)
 at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
@@ -84,12 +85,13 @@ at java.lang.Thread.run(Thread.java:818)
 <a name="distinctAsync_withNull"></a>
 <h3 class="failures">distinctAsync_withNull</h3>
 <span class="code">
-<pre>java.lang.RuntimeException: Not supported for tables
-at io.realm.internal.Table.sync(Table.java:1341)
-at io.realm.RealmResults.&lt;init&gt;(RealmResults.java:127)
-at io.realm.RealmResults.createFromTableOrView(RealmResults.java:89)
-at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1201)
-at io.realm.RealmQueryTest$4.run(RealmQueryTest.java:2189)
+<pre>java.lang.NullPointerException: Attempt to invoke virtual method 'io.realm.internal.TableView io.realm.internal.TableQuery.importHandoverTableView(long, long)' on a null object reference
+at io.realm.RealmResults.swapTableViewPointer(RealmResults.java:812)
+at io.realm.HandlerController.completedAsyncRealmResults(HandlerController.java:373)
+at io.realm.HandlerController.handleMessage(HandlerController.java:105)
+at android.os.Handler.dispatchMessage(Handler.java:98)
+at android.os.Looper.loop(Looper.java:148)
+at io.realm.RealmQueryTest$4.run(RealmQueryTest.java:2218)
 at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
 at java.util.concurrent.FutureTask.run(FutureTask.java:237)
 at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
@@ -110,27 +112,27 @@ at java.lang.Thread.run(Thread.java:818)
 </thead>
 <tr>
 <td>and_implicit</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>average_allNonNullRows</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>average_allNullColumns</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>average_emptyColumns</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>average_partialNullRows</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>beginWith_nullForNullableStrings</td>
+<td>average_allNonNullRows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>average_allNullColumns</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>average_emptyColumns</td>
 <td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>average_partialNullRows</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>beginWith_nullForNullableStrings</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>between</td>
@@ -138,43 +140,43 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>between_nullValuesInRow</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>buildQueryFromResultsGC</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>contains_caseSensitive</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>contains_caseSensitiveWithNonLatinCharacters</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>contains_nullForNullableStrings</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>deepLinkListQuery</td>
-<td class="success">passed (0.057s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>distinct</td>
-<td class="success">passed (0.246s)</td>
+<td class="success">passed (0.244s)</td>
 </tr>
 <tr>
 <td>distinctAsync</td>
-<td class="failures">failed (6.992s)</td>
+<td class="failures">failed (7.026s)</td>
 </tr>
 <tr>
 <td>distinctAsync_doesNotExist</td>
-<td class="success">passed (0.162s)</td>
+<td class="success">passed (0.170s)</td>
 </tr>
 <tr>
 <td>distinctAsync_indexedLinkedFields</td>
-<td class="success">passed (0.167s)</td>
+<td class="success">passed (0.161s)</td>
 </tr>
 <tr>
 <td>distinctAsync_invalidTypes</td>
@@ -182,7 +184,7 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>distinctAsync_notIndexedFields</td>
-<td class="success">passed (0.166s)</td>
+<td class="success">passed (0.164s)</td>
 </tr>
 <tr>
 <td>distinctAsync_notIndexedLinkedFields</td>
@@ -190,7 +192,7 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>distinctAsync_withNull</td>
-<td class="failures">failed (7.011s)</td>
+<td class="failures">failed (7.020s)</td>
 </tr>
 <tr>
 <td>distinct_doesNotExist</td>
@@ -198,43 +200,43 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>distinct_indexedLinkedFields</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.136s)</td>
 </tr>
 <tr>
 <td>distinct_invalidTypes</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>distinct_invalidTypesLinkedFields</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>distinct_notIndexedFields</td>
-<td class="success">passed (0.172s)</td>
-</tr>
-<tr>
-<td>distinct_notIndexedLinkedFields</td>
-<td class="success">passed (0.140s)</td>
-</tr>
-<tr>
-<td>distinct_withNull</td>
-<td class="success">passed (0.168s)</td>
-</tr>
-<tr>
-<td>endsWith_nullForNullableStrings</td>
 <td class="success">passed (0.025s)</td>
 </tr>
 <tr>
+<td>distinct_invalidTypesLinkedFields</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>distinct_notIndexedFields</td>
+<td class="success">passed (0.170s)</td>
+</tr>
+<tr>
+<td>distinct_notIndexedLinkedFields</td>
+<td class="success">passed (0.139s)</td>
+</tr>
+<tr>
+<td>distinct_withNull</td>
+<td class="success">passed (0.170s)</td>
+</tr>
+<tr>
+<td>endsWith_nullForNullableStrings</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
 <td>equalTo</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>equalTo_date</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>equalTo_nonLatinCharacters</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>equalTo_notNullableFields</td>
@@ -246,87 +248,87 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>equalTo_withNonExistingField</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>findAllSortedAsync_listOnSubObjectFieldThrows</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>findAllSortedAsync_onSubObjectFieldThrows</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>findAllSorted_listOnSubObjectFieldThrows</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>findAllSorted_multiFailures</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
+<td>findAllSortedAsync_listOnSubObjectFieldThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>findAllSortedAsync_onSubObjectFieldThrows</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>findAllSorted_listOnSubObjectFieldThrows</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>findAllSorted_multiFailures</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
 <td>findAllSorted_onSubObjectFieldThrows</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>findAllSorted_singleField</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>findFirst</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>georgian</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>greaterThan</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>greaterThanOrEqualTo</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>greaterThanOrEqualTo_date</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>greaterThanOrEqualTo_nullValuesInRow</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>greaterThan_date</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>greaterThan_nullValuesInRow</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>isEmpty</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>isEmpty_acrossLink</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>isEmpty_illegalFieldTypeThrows</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>isEmpty_invalidFieldNameThrows</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>isNotEmpty</td>
+<td>greaterThanOrEqualTo_date</td>
 <td class="success">passed (0.025s)</td>
 </tr>
 <tr>
-<td>isNotEmpty_acrossLink</td>
+<td>greaterThanOrEqualTo_nullValuesInRow</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>greaterThan_date</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>greaterThan_nullValuesInRow</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>isEmpty</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>isEmpty_acrossLink</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>isEmpty_illegalFieldTypeThrows</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>isEmpty_invalidFieldNameThrows</td>
 <td class="success">passed (0.030s)</td>
+</tr>
+<tr>
+<td>isNotEmpty</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>isNotEmpty_acrossLink</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>isNotEmpty_illegalFieldTypeThrows</td>
@@ -334,15 +336,15 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>isNotEmpty_invalidFieldNameThrows</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isNotNull_linkField</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isNotNull_linkFieldNotNullable</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isNotNull_listFieldThrows</td>
@@ -350,15 +352,15 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>isNotNull_nullableFields</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>isNull_linkField</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>isNull_linkFieldNotNullable</td>
+<td>isNull_linkField</td>
 <td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>isNull_linkFieldNotNullable</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>isNull_listFieldThrows</td>
@@ -366,11 +368,11 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>isNull_notNullableFields</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isNull_nullableFields</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isValid_linkViewQuery</td>
@@ -378,39 +380,39 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>isValid_removedParent</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isValid_tableQuery</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isValid_tableViewQuery</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>lessThan</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqualTo</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqualTo_date</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqual_nullValuesInRow</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
-<td>lessThan_Date</td>
+<td>lessThanOrEqualTo</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>lessThanOrEqualTo_date</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>lessThanOrEqual_nullValuesInRow</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
+<td>lessThan_Date</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>lessThan_nullValuesInRow</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>max_allNonNullRows</td>
@@ -418,7 +420,7 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>max_allNullColumns</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>max_emptyColumns</td>
@@ -430,7 +432,7 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>min_allNonNullRows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>min_allNullColumns</td>
@@ -438,23 +440,23 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>min_emptyColumns</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>min_partialNullRows</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>not</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>notEqualTo</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>notEqualTo_date</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>notEqualTo_nullableFields</td>
@@ -462,46 +464,46 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>not_aloneThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>or</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>queryLink</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>resultOfTableViewQuery</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>subQueryScope</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>sum_allNonNullRows</td>
 <td class="success">passed (0.026s)</td>
 </tr>
 <tr>
+<td>sum_allNonNullRows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>sum_allNullColumns</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>sum_emptyColumns</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>sum_partialNullRows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 8:26:50 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 8:47:11 PM</p>
 </div>
 </div>
 </body>

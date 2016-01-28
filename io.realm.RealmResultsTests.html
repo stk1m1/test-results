@@ -22,19 +22,19 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">90</div>
+<div class="counter">83</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">3</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">26.363s</div>
+<div class="counter">10.856s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">96%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,73 +54,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="distinctAsync"></a>
-<h3 class="failures">distinctAsync</h3>
-<span class="code">
-<pre>java.lang.NullPointerException: Attempt to invoke virtual method 'long io.realm.internal.TableQuery.handoverQuery(long)' on a null object reference
-at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1186)
-at io.realm.RealmResults.distinctAsync(RealmResults.java:615)
-at io.realm.RealmResultsTests$2.run(RealmResultsTests.java:1472)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
-at java.lang.Thread.run(Thread.java:818)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="distinctAsync_withNull"></a>
-<h3 class="failures">distinctAsync_withNull</h3>
-<span class="code">
-<pre>java.lang.NullPointerException: Attempt to invoke virtual method 'long io.realm.internal.TableQuery.handoverQuery(long)' on a null object reference
-at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1186)
-at io.realm.RealmResults.distinctAsync(RealmResults.java:615)
-at io.realm.RealmResultsTests$3.run(RealmResultsTests.java:1567)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
-at java.lang.Thread.run(Thread.java:818)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="distinctAsync_withSingleNullField"></a>
-<h3 class="failures">distinctAsync_withSingleNullField</h3>
-<span class="code">
-<pre>java.lang.NullPointerException: Attempt to invoke virtual method 'long io.realm.internal.TableQuery.handoverQuery(long)' on a null object reference
-at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1186)
-at io.realm.RealmResults.distinctAsync(RealmResults.java:615)
-at io.realm.RealmResultsTests.distinctAsync_withSingleNullField(RealmResultsTests.java:1623)
-at java.lang.reflect.Method.invoke(Native Method)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
-at io.realm.rule.RunInLooperThread$1$1.run(RunInLooperThread.java:100)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
-at java.lang.Thread.run(Thread.java:818)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -131,79 +68,51 @@ at java.lang.Thread.run(Thread.java:818)
 </thead>
 <tr>
 <td>average_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.136s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>avg</td>
-<td class="success">passed (0.117s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>avg_emptyNonNullFields</td>
-<td class="success">passed (0.113s)</td>
-</tr>
-<tr>
-<td>avg_emptyNullFields</td>
 <td class="success">passed (0.110s)</td>
 </tr>
 <tr>
+<td>avg_emptyNullFields</td>
+<td class="success">passed (0.114s)</td>
+</tr>
+<tr>
 <td>avg_partialNullRows</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.118s)</td>
 </tr>
 <tr>
 <td>clear</td>
-<td class="success">passed (0.136s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>clear_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>contains_realmObjectFromOtherRealm</td>
-<td class="success">passed (0.235s)</td>
+<td class="success">passed (0.223s)</td>
 </tr>
 <tr>
 <td>count</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.107s)</td>
 </tr>
 <tr>
 <td>distinct</td>
-<td class="success">passed (0.339s)</td>
-</tr>
-<tr>
-<td>distinctAsync</td>
-<td class="failures">failed (7.139s)</td>
-</tr>
-<tr>
-<td>distinctAsync_doesNotExist</td>
-<td class="success">passed (0.272s)</td>
-</tr>
-<tr>
-<td>distinctAsync_indexedLinkedFields</td>
-<td class="success">passed (0.251s)</td>
-</tr>
-<tr>
-<td>distinctAsync_invalidTypes</td>
-<td class="success">passed (0.162s)</td>
-</tr>
-<tr>
-<td>distinctAsync_notIndexedFields</td>
-<td class="success">passed (0.281s)</td>
+<td class="success">passed (0.259s)</td>
 </tr>
 <tr>
 <td>distinctAsync_notIndexedLinkedFields</td>
-<td class="success">passed (0.136s)</td>
-</tr>
-<tr>
-<td>distinctAsync_withNull</td>
-<td class="failures">failed (7.129s)</td>
-</tr>
-<tr>
-<td>distinctAsync_withSingleNullField</td>
-<td class="failures">failed (0.255s)</td>
+<td class="success">passed (0.106s)</td>
 </tr>
 <tr>
 <td>distinct_indexedLinkedFields</td>
-<td class="success">passed (0.247s)</td>
+<td class="success">passed (0.229s)</td>
 </tr>
 <tr>
 <td>distinct_invalidTypesLinkedFields</td>
@@ -211,23 +120,23 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>distinct_noneExistingField</td>
-<td class="success">passed (0.275s)</td>
+<td class="success">passed (0.276s)</td>
 </tr>
 <tr>
 <td>distinct_noneIndexedFields</td>
-<td class="success">passed (0.271s)</td>
+<td class="success">passed (0.249s)</td>
 </tr>
 <tr>
 <td>distinct_notIndexedLinkedFields</td>
-<td class="success">passed (0.221s)</td>
+<td class="success">passed (0.223s)</td>
 </tr>
 <tr>
 <td>distinct_withNull</td>
-<td class="success">passed (0.204s)</td>
+<td class="success">passed (0.228s)</td>
 </tr>
 <tr>
 <td>findFirst</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>first</td>
@@ -235,43 +144,43 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>firstAndLast_throwsIfEmpty</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>first_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>get</td>
-<td class="success">passed (0.107s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>indexOf</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>isValid</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>isValid_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>last</td>
-<td class="success">passed (0.107s)</td>
+<td class="success">passed (0.132s)</td>
 </tr>
 <tr>
 <td>last_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.113s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>max</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>max_dateResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.131s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>max_emptyNonNullFields</td>
@@ -279,27 +188,27 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>max_emptyNullFields</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>max_partialNullRows</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.107s)</td>
 </tr>
 <tr>
 <td>max_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.113s)</td>
+<td class="success">passed (0.135s)</td>
 </tr>
 <tr>
 <td>methodsThrowOnWrongThread</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>min</td>
-<td class="success">passed (0.106s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>minDateResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.105s)</td>
+<td class="success">passed (0.134s)</td>
 </tr>
 <tr>
 <td>min_emptyNonNullFields</td>
@@ -307,67 +216,67 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>min_emptyNullFields</td>
-<td class="success">passed (0.132s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>min_partialNullRows</td>
-<td class="success">passed (0.113s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>min_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>mutableMethodsOutsideTransactions</td>
-<td class="success">passed (0.137s)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td class="success">passed (0.106s)</td>
-</tr>
-<tr>
-<td>removeLast</td>
-<td class="success">passed (0.085s)</td>
-</tr>
-<tr>
-<td>removeLast_emptyList</td>
-<td class="success">passed (0.107s)</td>
-</tr>
-<tr>
-<td>setter_nullValueInNullableField</td>
-<td class="success">passed (0.107s)</td>
-</tr>
-<tr>
-<td>setter_nullValueInRequiredField</td>
-<td class="success">passed (0.109s)</td>
-</tr>
-<tr>
-<td>size_resultsBuiltOnDeletedLinkView</td>
 <td class="success">passed (0.141s)</td>
 </tr>
 <tr>
-<td>sort_boolean</td>
+<td>remove</td>
+<td class="success">passed (0.111s)</td>
+</tr>
+<tr>
+<td>removeLast</td>
+<td class="success">passed (0.110s)</td>
+</tr>
+<tr>
+<td>removeLast_emptyList</td>
 <td class="success">passed (0.140s)</td>
 </tr>
 <tr>
+<td>setter_nullValueInNullableField</td>
+<td class="success">passed (0.113s)</td>
+</tr>
+<tr>
+<td>setter_nullValueInRequiredField</td>
+<td class="success">passed (0.110s)</td>
+</tr>
+<tr>
+<td>size_resultsBuiltOnDeletedLinkView</td>
+<td class="success">passed (0.128s)</td>
+</tr>
+<tr>
+<td>sort_boolean</td>
+<td class="success">passed (0.111s)</td>
+</tr>
+<tr>
 <td>sort_danishCharacters</td>
-<td class="success">passed (0.105s)</td>
+<td class="success">passed (0.116s)</td>
 </tr>
 <tr>
 <td>sort_date</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>sort_double</td>
-<td class="success">passed (0.136s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>sort_emptyResults</td>
-<td class="success">passed (0.136s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>sort_float</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.142s)</td>
 </tr>
 <tr>
 <td>sort_greekCharacters</td>
@@ -375,27 +284,27 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>sort_long</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
 <td>sort_manyDifferentCharacters</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>sort_nonExistingColumn</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>sort_nullArguments</td>
-<td class="success">passed (0.109s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>sort_rowsWithPartialNullValues</td>
-<td class="success">passed (0.109s)</td>
+<td class="success">passed (0.135s)</td>
 </tr>
 <tr>
 <td>sort_russianCharacters</td>
-<td class="success">passed (0.109s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>sort_singleField</td>
@@ -407,31 +316,31 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>sort_twoLanguages</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.135s)</td>
 </tr>
 <tr>
 <td>sort_usingChildObject</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.134s)</td>
 </tr>
 <tr>
 <td>subList</td>
-<td class="success">passed (0.111s)</td>
+<td class="success">passed (0.133s)</td>
 </tr>
 <tr>
 <td>sum</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.105s)</td>
 </tr>
 <tr>
 <td>sum_nonLatinColumnNames</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.106s)</td>
 </tr>
 <tr>
 <td>sum_nullRows</td>
-<td class="success">passed (0.141s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>sum_partialNullRows</td>
-<td class="success">passed (0.111s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>sum_resultsBuiltOnDeletedLinkView</td>
@@ -439,62 +348,62 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>testDistinctInvalidTypes</td>
-<td class="success">passed (0.224s)</td>
+<td class="success">passed (0.201s)</td>
 </tr>
 <tr>
 <td>unsupportedMethods</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.105s)</td>
 </tr>
 <tr>
 <td>verifyArmComparisons</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
 <td>where</td>
-<td class="success">passed (0.110s)</td>
-</tr>
-<tr>
-<td>whereResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.118s)</td>
-</tr>
-<tr>
-<td>where_contains</td>
-<td class="success">passed (0.110s)</td>
-</tr>
-<tr>
-<td>where_contains_null</td>
-<td class="success">passed (0.139s)</td>
-</tr>
-<tr>
-<td>where_equalTo_manyConditions</td>
-<td class="success">passed (0.138s)</td>
-</tr>
-<tr>
-<td>where_findAllSorted</td>
-<td class="success">passed (0.114s)</td>
-</tr>
-<tr>
-<td>where_findAll_size</td>
-<td class="success">passed (0.113s)</td>
-</tr>
-<tr>
-<td>where_lessThanGreaterThan</td>
 <td class="success">passed (0.112s)</td>
 </tr>
 <tr>
+<td>whereResultsBuiltOnDeletedLinkView</td>
+<td class="success">passed (0.133s)</td>
+</tr>
+<tr>
+<td>where_contains</td>
+<td class="success">passed (0.106s)</td>
+</tr>
+<tr>
+<td>where_contains_null</td>
+<td class="success">passed (0.108s)</td>
+</tr>
+<tr>
+<td>where_equalTo_manyConditions</td>
+<td class="success">passed (0.136s)</td>
+</tr>
+<tr>
+<td>where_findAllSorted</td>
+<td class="success">passed (0.144s)</td>
+</tr>
+<tr>
+<td>where_findAll_size</td>
+<td class="success">passed (0.108s)</td>
+</tr>
+<tr>
+<td>where_lessThanGreaterThan</td>
+<td class="success">passed (0.103s)</td>
+</tr>
+<tr>
 <td>where_queryDateField</td>
-<td class="success">passed (0.107s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>where_shouldNotContainRemovedItem</td>
-<td class="success">passed (0.141s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 27, 2016 9:26:42 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 8:26:50 PM</p>
 </div>
 </div>
 </body>

@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.861s</div>
+<div class="counter">17.241s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">97%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,10 +54,52 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="distinctAsync"></a>
+<h3 class="failures">distinctAsync</h3>
+<span class="code">
+<pre>java.lang.RuntimeException: Not supported for tables
+at io.realm.internal.Table.sync(Table.java:1341)
+at io.realm.RealmResults.&lt;init&gt;(RealmResults.java:127)
+at io.realm.RealmResults.createFromTableOrView(RealmResults.java:89)
+at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1201)
+at io.realm.RealmQueryTest$3.run(RealmQueryTest.java:2093)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+at java.lang.Thread.run(Thread.java:818)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="distinctAsync_withNull"></a>
+<h3 class="failures">distinctAsync_withNull</h3>
+<span class="code">
+<pre>java.lang.RuntimeException: Not supported for tables
+at io.realm.internal.Table.sync(Table.java:1341)
+at io.realm.RealmResults.&lt;init&gt;(RealmResults.java:127)
+at io.realm.RealmResults.createFromTableOrView(RealmResults.java:89)
+at io.realm.RealmQuery.distinctAsync(RealmQuery.java:1201)
+at io.realm.RealmQueryTest$4.run(RealmQueryTest.java:2189)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+at java.lang.Thread.run(Thread.java:818)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -68,71 +110,71 @@
 </thead>
 <tr>
 <td>and_implicit</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>average_allNonNullRows</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>average_allNullColumns</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>average_emptyColumns</td>
-<td class="success">passed (0s)</td>
-</tr>
-<tr>
-<td>average_partialNullRows</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>beginWith_nullForNullableStrings</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>between</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>between_nullValuesInRow</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>buildQueryFromResultsGC</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>contains_caseSensitive</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>contains_caseSensitiveWithNonLatinCharacters</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>contains_nullForNullableStrings</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>deepLinkListQuery</td>
 <td class="success">passed (0.027s)</td>
 </tr>
 <tr>
+<td>average_allNullColumns</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>average_emptyColumns</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>average_partialNullRows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>beginWith_nullForNullableStrings</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>between</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>between_nullValuesInRow</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
+<td>buildQueryFromResultsGC</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>contains_caseSensitive</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>contains_caseSensitiveWithNonLatinCharacters</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>contains_nullForNullableStrings</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>deepLinkListQuery</td>
+<td class="success">passed (0.057s)</td>
+</tr>
+<tr>
 <td>distinct</td>
-<td class="success">passed (0.281s)</td>
+<td class="success">passed (0.246s)</td>
 </tr>
 <tr>
 <td>distinctAsync</td>
-<td class="success">passed (0.258s)</td>
+<td class="failures">failed (6.992s)</td>
 </tr>
 <tr>
 <td>distinctAsync_doesNotExist</td>
-<td class="success">passed (0.192s)</td>
+<td class="success">passed (0.162s)</td>
 </tr>
 <tr>
 <td>distinctAsync_indexedLinkedFields</td>
-<td class="success">passed (0.197s)</td>
+<td class="success">passed (0.167s)</td>
 </tr>
 <tr>
 <td>distinctAsync_invalidTypes</td>
@@ -140,43 +182,43 @@
 </tr>
 <tr>
 <td>distinctAsync_notIndexedFields</td>
-<td class="success">passed (0.193s)</td>
+<td class="success">passed (0.166s)</td>
 </tr>
 <tr>
 <td>distinctAsync_notIndexedLinkedFields</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>distinctAsync_withNull</td>
-<td class="success">passed (0.196s)</td>
-</tr>
-<tr>
-<td>distinct_doesNotExist</td>
-<td class="success">passed (0.172s)</td>
-</tr>
-<tr>
-<td>distinct_indexedLinkedFields</td>
-<td class="success">passed (0.191s)</td>
-</tr>
-<tr>
-<td>distinct_invalidTypes</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>distinct_invalidTypesLinkedFields</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>distinctAsync_withNull</td>
+<td class="failures">failed (7.011s)</td>
+</tr>
+<tr>
+<td>distinct_doesNotExist</td>
+<td class="success">passed (0.167s)</td>
+</tr>
+<tr>
+<td>distinct_indexedLinkedFields</td>
+<td class="success">passed (0.108s)</td>
+</tr>
+<tr>
+<td>distinct_invalidTypes</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>distinct_invalidTypesLinkedFields</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
 <td>distinct_notIndexedFields</td>
-<td class="success">passed (0.197s)</td>
+<td class="success">passed (0.172s)</td>
 </tr>
 <tr>
 <td>distinct_notIndexedLinkedFields</td>
-<td class="success">passed (0.133s)</td>
+<td class="success">passed (0.140s)</td>
 </tr>
 <tr>
 <td>distinct_withNull</td>
-<td class="success">passed (0.144s)</td>
+<td class="success">passed (0.168s)</td>
 </tr>
 <tr>
 <td>endsWith_nullForNullableStrings</td>
@@ -188,31 +230,31 @@
 </tr>
 <tr>
 <td>equalTo_date</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>equalTo_nonLatinCharacters</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>equalTo_notNullableFields</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>equalTo_nullableFields</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>equalTo_withNonExistingField</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>findAllSortedAsync_listOnSubObjectFieldThrows</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>findAllSortedAsync_onSubObjectFieldThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>findAllSorted_listOnSubObjectFieldThrows</td>
@@ -220,11 +262,11 @@
 </tr>
 <tr>
 <td>findAllSorted_multiFailures</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>findAllSorted_onSubObjectFieldThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>findAllSorted_singleField</td>
@@ -236,19 +278,19 @@
 </tr>
 <tr>
 <td>georgian</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>greaterThan</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>greaterThanOrEqualTo</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>greaterThanOrEqualTo_date</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>greaterThanOrEqualTo_nullValuesInRow</td>
@@ -256,47 +298,47 @@
 </tr>
 <tr>
 <td>greaterThan_date</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>greaterThan_nullValuesInRow</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isEmpty</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isEmpty_acrossLink</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>isEmpty_illegalFieldTypeThrows</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isEmpty_invalidFieldNameThrows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>isNotEmpty</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>isNotEmpty_acrossLink</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>isNotEmpty_illegalFieldTypeThrows</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isNotEmpty_invalidFieldNameThrows</td>
-<td class="success">passed (0.053s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>isNotNull_linkField</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>isNotNull_linkFieldNotNullable</td>
@@ -304,79 +346,79 @@
 </tr>
 <tr>
 <td>isNotNull_listFieldThrows</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>isNotNull_nullableFields</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>isNull_linkField</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>isNull_linkFieldNotNullable</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>isNull_listFieldThrows</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>isNull_notNullableFields</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>isNull_nullableFields</td>
-<td class="success">passed (0.026s)</td>
-</tr>
-<tr>
-<td>isValid_linkViewQuery</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>isValid_removedParent</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>isValid_tableQuery</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>isValid_tableViewQuery</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>lessThan</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqualTo</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqualTo_date</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>lessThanOrEqual_nullValuesInRow</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>lessThan_Date</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>lessThan_nullValuesInRow</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
-<td>max_allNonNullRows</td>
+<td>isNull_linkFieldNotNullable</td>
 <td class="success">passed (0.025s)</td>
 </tr>
 <tr>
-<td>max_allNullColumns</td>
+<td>isNull_listFieldThrows</td>
+<td class="success">passed (0.025s)</td>
+</tr>
+<tr>
+<td>isNull_notNullableFields</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>isNull_nullableFields</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>isValid_linkViewQuery</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>isValid_removedParent</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>isValid_tableQuery</td>
 <td class="success">passed (0.030s)</td>
+</tr>
+<tr>
+<td>isValid_tableViewQuery</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>lessThan</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>lessThanOrEqualTo</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>lessThanOrEqualTo_date</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>lessThanOrEqual_nullValuesInRow</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>lessThan_Date</td>
+<td class="success">passed (0.026s)</td>
+</tr>
+<tr>
+<td>lessThan_nullValuesInRow</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>max_allNonNullRows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>max_allNullColumns</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>max_emptyColumns</td>
@@ -384,39 +426,39 @@
 </tr>
 <tr>
 <td>max_partialNullRows</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>min_allNonNullRows</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>min_allNullColumns</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>min_emptyColumns</td>
-<td class="success">passed (0.025s)</td>
-</tr>
-<tr>
-<td>min_partialNullRows</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>min_allNonNullRows</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>min_allNullColumns</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
+<td>min_emptyColumns</td>
+<td class="success">passed (0.029s)</td>
+</tr>
+<tr>
+<td>min_partialNullRows</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
 <td>not</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>notEqualTo</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>notEqualTo_date</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>notEqualTo_nullableFields</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>not_aloneThrows</td>
@@ -428,11 +470,11 @@
 </tr>
 <tr>
 <td>queryLink</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>resultOfTableViewQuery</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>subQueryScope</td>
@@ -440,26 +482,26 @@
 </tr>
 <tr>
 <td>sum_allNonNullRows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>sum_allNullColumns</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>sum_emptyColumns</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>sum_partialNullRows</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 27, 2016 9:26:42 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 8:26:50 PM</p>
 </div>
 </div>
 </body>

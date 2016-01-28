@@ -34,7 +34,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.349s</div>
+<div class="counter">20.421s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,15 +63,23 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="distinctAsync_withSingleNullField"></a>
-<h3 class="failures">distinctAsync_withSingleNullField</h3>
+<a name="distinctAsync_withNull"></a>
+<h3 class="failures">distinctAsync_withNull</h3>
 <span class="code">
 <pre>junit.framework.AssertionFailedError: Test took longer than 7 seconds
 at junit.framework.Assert.fail(Assert.java:50)
 at io.realm.TestHelper.awaitOrFail(TestHelper.java:668)
 at io.realm.TestHelper.awaitOrFail(TestHelper.java:662)
 at io.realm.TestHelper.exitOrThrow(TestHelper.java:687)
-at io.realm.rule.RunInLooperThread$1.evaluate(RunInLooperThread.java:116)
+at io.realm.RealmResultsTests.distinctAsync_withNull(RealmResultsTests.java:1612)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at io.realm.rule.TestRealmConfigurationFactory$1.evaluate(TestRealmConfigurationFactory.java:49)
 at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
 at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
@@ -111,103 +119,103 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:18
 </thead>
 <tr>
 <td>average_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.105s)</td>
+<td class="success">passed (0.192s)</td>
 </tr>
 <tr>
 <td>avg</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>avg_emptyNonNullFields</td>
-<td class="success">passed (0.137s)</td>
-</tr>
-<tr>
-<td>avg_emptyNullFields</td>
-<td class="success">passed (0.111s)</td>
-</tr>
-<tr>
-<td>avg_partialNullRows</td>
-<td class="success">passed (0.109s)</td>
-</tr>
-<tr>
-<td>clear</td>
-<td class="success">passed (0.131s)</td>
-</tr>
-<tr>
-<td>clear_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.140s)</td>
-</tr>
-<tr>
-<td>contains_realmObjectFromOtherRealm</td>
-<td class="success">passed (0.227s)</td>
-</tr>
-<tr>
-<td>count</td>
-<td class="success">passed (0.109s)</td>
-</tr>
-<tr>
-<td>distinct</td>
-<td class="success">passed (0.288s)</td>
-</tr>
-<tr>
-<td>distinctAsync_doesNotExist</td>
-<td class="success">passed (0.276s)</td>
-</tr>
-<tr>
-<td>distinctAsync_indexedLinkedFields</td>
-<td class="success">passed (0.282s)</td>
-</tr>
-<tr>
-<td>distinctAsync_invalidTypes</td>
-<td class="success">passed (0.235s)</td>
-</tr>
-<tr>
-<td>distinctAsync_notIndexedFields</td>
-<td class="success">passed (0.252s)</td>
-</tr>
-<tr>
-<td>distinctAsync_notIndexedLinkedFields</td>
-<td class="success">passed (0.115s)</td>
-</tr>
-<tr>
-<td>distinctAsync_withSingleNullField</td>
-<td class="failures">failed (7.023s)</td>
-</tr>
-<tr>
-<td>distinct_indexedLinkedFields</td>
-<td class="success">passed (0.251s)</td>
-</tr>
-<tr>
-<td>distinct_invalidTypesLinkedFields</td>
-<td class="success">passed (0.109s)</td>
-</tr>
-<tr>
-<td>distinct_noneExistingField</td>
-<td class="success">passed (0.250s)</td>
-</tr>
-<tr>
-<td>distinct_noneIndexedFields</td>
-<td class="success">passed (0.280s)</td>
-</tr>
-<tr>
-<td>distinct_notIndexedLinkedFields</td>
-<td class="success">passed (0.226s)</td>
-</tr>
-<tr>
-<td>distinct_withNull</td>
-<td class="success">passed (0.219s)</td>
-</tr>
-<tr>
-<td>findFirst</td>
 <td class="success">passed (0.112s)</td>
 </tr>
 <tr>
+<td>avg_emptyNullFields</td>
+<td class="success">passed (0.140s)</td>
+</tr>
+<tr>
+<td>avg_partialNullRows</td>
+<td class="success">passed (0.111s)</td>
+</tr>
+<tr>
+<td>clear</td>
+<td class="success">passed (0.165s)</td>
+</tr>
+<tr>
+<td>clear_resultsBuiltOnDeletedLinkView</td>
+<td class="success">passed (0.113s)</td>
+</tr>
+<tr>
+<td>contains_realmObjectFromOtherRealm</td>
+<td class="success">passed (0.252s)</td>
+</tr>
+<tr>
+<td>count</td>
+<td class="success">passed (0.145s)</td>
+</tr>
+<tr>
+<td>distinct</td>
+<td class="success">passed (0.250s)</td>
+</tr>
+<tr>
+<td>distinctAsync_doesNotExist</td>
+<td class="success">passed (0.272s)</td>
+</tr>
+<tr>
+<td>distinctAsync_indexedLinkedFields</td>
+<td class="success">passed (0.256s)</td>
+</tr>
+<tr>
+<td>distinctAsync_invalidTypes</td>
+<td class="success">passed (0.171s)</td>
+</tr>
+<tr>
+<td>distinctAsync_notIndexedFields</td>
+<td class="success">passed (0.279s)</td>
+</tr>
+<tr>
+<td>distinctAsync_notIndexedLinkedFields</td>
+<td class="success">passed (0.111s)</td>
+</tr>
+<tr>
+<td>distinctAsync_withNull</td>
+<td class="failures">failed (7.147s)</td>
+</tr>
+<tr>
+<td>distinct_indexedLinkedFields</td>
+<td class="success">passed (0.226s)</td>
+</tr>
+<tr>
+<td>distinct_invalidTypesLinkedFields</td>
+<td class="success">passed (0.104s)</td>
+</tr>
+<tr>
+<td>distinct_noneExistingField</td>
+<td class="success">passed (0.251s)</td>
+</tr>
+<tr>
+<td>distinct_noneIndexedFields</td>
+<td class="success">passed (0.414s)</td>
+</tr>
+<tr>
+<td>distinct_notIndexedLinkedFields</td>
+<td class="success">passed (0.247s)</td>
+</tr>
+<tr>
+<td>distinct_withNull</td>
+<td class="success">passed (0.252s)</td>
+</tr>
+<tr>
+<td>findFirst</td>
+<td class="success">passed (0.115s)</td>
+</tr>
+<tr>
 <td>first</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>firstAndLast_throwsIfEmpty</td>
-<td class="success">passed (0.132s)</td>
+<td class="success">passed (0.107s)</td>
 </tr>
 <tr>
 <td>first_resultsBuiltOnDeletedLinkView</td>
@@ -215,83 +223,83 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:18
 </tr>
 <tr>
 <td>get</td>
-<td class="success">passed (0.137s)</td>
+<td class="success">passed (0.165s)</td>
 </tr>
 <tr>
 <td>indexOf</td>
-<td class="success">passed (0.136s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>isValid</td>
-<td class="success">passed (0.196s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>isValid_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.115s)</td>
+<td class="success">passed (0.113s)</td>
 </tr>
 <tr>
 <td>last</td>
-<td class="success">passed (0.105s)</td>
+<td class="success">passed (0.117s)</td>
 </tr>
 <tr>
 <td>last_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.114s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>max</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.254s)</td>
 </tr>
 <tr>
 <td>max_dateResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.135s)</td>
+<td class="success">passed (0.144s)</td>
 </tr>
 <tr>
 <td>max_emptyNonNullFields</td>
-<td class="success">passed (0.139s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>max_emptyNullFields</td>
-<td class="success">passed (0.175s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 <tr>
 <td>max_partialNullRows</td>
-<td class="success">passed (0.111s)</td>
+<td class="success">passed (0.161s)</td>
 </tr>
 <tr>
 <td>max_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.140s)</td>
+<td class="success">passed (0.108s)</td>
 </tr>
 <tr>
 <td>methodsThrowOnWrongThread</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>min</td>
-<td class="success">passed (0.109s)</td>
+<td class="success">passed (0.144s)</td>
 </tr>
 <tr>
 <td>minDateResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.114s)</td>
+<td class="success">passed (0.308s)</td>
 </tr>
 <tr>
 <td>min_emptyNonNullFields</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.116s)</td>
 </tr>
 <tr>
 <td>min_emptyNullFields</td>
-<td class="success">passed (0.112s)</td>
+<td class="success">passed (0.110s)</td>
 </tr>
 <tr>
 <td>min_partialNullRows</td>
-<td class="success">passed (0.111s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>min_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>mutableMethodsOutsideTransactions</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.114s)</td>
 </tr>
 <tr>
 <td>remove</td>
@@ -299,151 +307,151 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:18
 </tr>
 <tr>
 <td>removeLast</td>
-<td class="success">passed (0.141s)</td>
+<td class="success">passed (0.115s)</td>
 </tr>
 <tr>
 <td>removeLast_emptyList</td>
-<td class="success">passed (0.142s)</td>
+<td class="success">passed (0.112s)</td>
 </tr>
 <tr>
 <td>setter_nullValueInNullableField</td>
-<td class="success">passed (0.138s)</td>
+<td class="success">passed (0.131s)</td>
 </tr>
 <tr>
 <td>setter_nullValueInRequiredField</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.168s)</td>
 </tr>
 <tr>
 <td>size_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.133s)</td>
+<td class="success">passed (0.115s)</td>
 </tr>
 <tr>
 <td>sort_boolean</td>
-<td class="success">passed (0.137s)</td>
+<td class="success">passed (0.136s)</td>
 </tr>
 <tr>
 <td>sort_danishCharacters</td>
-<td class="success">passed (0.143s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>sort_date</td>
-<td class="success">passed (0.117s)</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
 <td>sort_double</td>
-<td class="success">passed (0.144s)</td>
+<td class="success">passed (0.137s)</td>
 </tr>
 <tr>
 <td>sort_emptyResults</td>
-<td class="success">passed (0.138s)</td>
+<td class="success">passed (0.139s)</td>
 </tr>
 <tr>
 <td>sort_float</td>
-<td class="success">passed (0.144s)</td>
+<td class="success">passed (0.193s)</td>
 </tr>
 <tr>
 <td>sort_greekCharacters</td>
-<td class="success">passed (0.141s)</td>
+<td class="success">passed (0.164s)</td>
 </tr>
 <tr>
 <td>sort_long</td>
-<td class="success">passed (0.138s)</td>
+<td class="success">passed (0.106s)</td>
 </tr>
 <tr>
 <td>sort_manyDifferentCharacters</td>
-<td class="success">passed (0.108s)</td>
+<td class="success">passed (0.133s)</td>
 </tr>
 <tr>
 <td>sort_nonExistingColumn</td>
-<td class="success">passed (0.112s)</td>
-</tr>
-<tr>
-<td>sort_nullArguments</td>
-<td class="success">passed (0.108s)</td>
-</tr>
-<tr>
-<td>sort_rowsWithPartialNullValues</td>
-<td class="success">passed (0.140s)</td>
-</tr>
-<tr>
-<td>sort_russianCharacters</td>
-<td class="success">passed (0.115s)</td>
-</tr>
-<tr>
-<td>sort_singleField</td>
-<td class="success">passed (0.113s)</td>
-</tr>
-<tr>
-<td>sort_string</td>
-<td class="success">passed (0.110s)</td>
-</tr>
-<tr>
-<td>sort_twoLanguages</td>
-<td class="success">passed (0.142s)</td>
-</tr>
-<tr>
-<td>sort_usingChildObject</td>
-<td class="success">passed (0.113s)</td>
-</tr>
-<tr>
-<td>subList</td>
-<td class="success">passed (0.108s)</td>
-</tr>
-<tr>
-<td>sum</td>
-<td class="success">passed (0.139s)</td>
-</tr>
-<tr>
-<td>sum_nonLatinColumnNames</td>
 <td class="success">passed (0.114s)</td>
 </tr>
 <tr>
-<td>sum_nullRows</td>
-<td class="success">passed (0.118s)</td>
+<td>sort_nullArguments</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
-<td>sum_partialNullRows</td>
-<td class="success">passed (0.137s)</td>
+<td>sort_rowsWithPartialNullValues</td>
+<td class="success">passed (0.143s)</td>
 </tr>
 <tr>
-<td>sum_resultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.115s)</td>
+<td>sort_russianCharacters</td>
+<td class="success">passed (0.134s)</td>
 </tr>
 <tr>
-<td>testDistinctInvalidTypes</td>
-<td class="success">passed (0.258s)</td>
+<td>sort_singleField</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
-<td>unsupportedMethods</td>
-<td class="success">passed (0.116s)</td>
-</tr>
-<tr>
-<td>verifyArmComparisons</td>
-<td class="success">passed (0.111s)</td>
-</tr>
-<tr>
-<td>where</td>
+<td>sort_string</td>
 <td class="success">passed (0.112s)</td>
 </tr>
 <tr>
-<td>whereResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0.103s)</td>
-</tr>
-<tr>
-<td>where_contains</td>
-<td class="success">passed (0.137s)</td>
-</tr>
-<tr>
-<td>where_contains_null</td>
+<td>sort_twoLanguages</td>
 <td class="success">passed (0.113s)</td>
 </tr>
 <tr>
+<td>sort_usingChildObject</td>
+<td class="success">passed (0.109s)</td>
+</tr>
+<tr>
+<td>subList</td>
+<td class="success">passed (0.167s)</td>
+</tr>
+<tr>
+<td>sum</td>
+<td class="success">passed (0.172s)</td>
+</tr>
+<tr>
+<td>sum_nonLatinColumnNames</td>
+<td class="success">passed (0.113s)</td>
+</tr>
+<tr>
+<td>sum_nullRows</td>
+<td class="success">passed (0.135s)</td>
+</tr>
+<tr>
+<td>sum_partialNullRows</td>
+<td class="success">passed (0.109s)</td>
+</tr>
+<tr>
+<td>sum_resultsBuiltOnDeletedLinkView</td>
+<td class="success">passed (0.141s)</td>
+</tr>
+<tr>
+<td>testDistinctInvalidTypes</td>
+<td class="success">passed (0.353s)</td>
+</tr>
+<tr>
+<td>unsupportedMethods</td>
+<td class="success">passed (0.110s)</td>
+</tr>
+<tr>
+<td>verifyArmComparisons</td>
+<td class="success">passed (0.191s)</td>
+</tr>
+<tr>
+<td>where</td>
+<td class="success">passed (0.109s)</td>
+</tr>
+<tr>
+<td>whereResultsBuiltOnDeletedLinkView</td>
+<td class="success">passed (0.136s)</td>
+</tr>
+<tr>
+<td>where_contains</td>
+<td class="success">passed (0.109s)</td>
+</tr>
+<tr>
+<td>where_contains_null</td>
+<td class="success">passed (0.111s)</td>
+</tr>
+<tr>
 <td>where_equalTo_manyConditions</td>
-<td class="success">passed (0.139s)</td>
+<td class="success">passed (0.141s)</td>
 </tr>
 <tr>
 <td>where_findAllSorted</td>
-<td class="success">passed (0.139s)</td>
+<td class="success">passed (0.138s)</td>
 </tr>
 <tr>
 <td>where_findAll_size</td>
@@ -451,22 +459,22 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:18
 </tr>
 <tr>
 <td>where_lessThanGreaterThan</td>
-<td class="success">passed (0.110s)</td>
+<td class="success">passed (0.109s)</td>
 </tr>
 <tr>
 <td>where_queryDateField</td>
-<td class="success">passed (0.114s)</td>
+<td class="success">passed (0.163s)</td>
 </tr>
 <tr>
 <td>where_shouldNotContainRemovedItem</td>
-<td class="success">passed (0.137s)</td>
+<td class="success">passed (0.111s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 10:51:49 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 11:03:34 PM</p>
 </div>
 </div>
 </body>

@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.166s</div>
+<div class="counter">0.116s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">80%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,10 +54,88 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testDeletingRealmAlsoClearsConfigurationCache"></a>
+<h3 class="failures">testDeletingRealmAlsoClearsConfigurationCache</h3>
+<span class="code">
+<pre>java.lang.NoSuchMethodError: No static method copyRealmFromAssets(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V in class Lio/realm/TestHelper; or its super classes (declaration of 'io.realm.TestHelper' appears in /data/app/io.realm.test-1/base.apk)
+at io.realm.RealmCacheTest.testDeletingRealmAlsoClearsConfigurationCache(RealmCacheTest.java:151)
+at java.lang.reflect.Method.invoke(Native Method)
+at junit.framework.TestCase.runTest(TestCase.java:168)
+at junit.framework.TestCase.runBare(TestCase.java:134)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testDontCacheWrongConfigurations"></a>
+<h3 class="failures">testDontCacheWrongConfigurations</h3>
+<span class="code">
+<pre>java.lang.NoSuchMethodError: No static method copyRealmFromAssets(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V in class Lio/realm/TestHelper; or its super classes (declaration of 'io.realm.TestHelper' appears in /data/app/io.realm.test-1/base.apk)
+at io.realm.RealmCacheTest.testDontCacheWrongConfigurations(RealmCacheTest.java:116)
+at java.lang.reflect.Method.invoke(Native Method)
+at junit.framework.TestCase.runTest(TestCase.java:168)
+at junit.framework.TestCase.runBare(TestCase.java:134)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -72,15 +150,15 @@
 </tr>
 <tr>
 <td>testDeletingRealmAlsoClearsConfigurationCache</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0.001s)</td>
 </tr>
 <tr>
 <td>testDifferentThreadsDifferentInstance</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testDontCacheWrongConfigurations</td>
-<td class="success">passed (0.029s)</td>
+<td class="failures">failed (0s)</td>
 </tr>
 <tr>
 <td>testDynamicRealmCacheIsCleared</td>
@@ -88,11 +166,11 @@
 </tr>
 <tr>
 <td>testGetInstanceClearsCacheWhenFailed</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>testRealmCache</td>
-<td class="success">passed (0.025s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>testRealmCacheIsCleared</td>
@@ -104,14 +182,14 @@
 </tr>
 <tr>
 <td>testValidateSchemasOverThreads</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Jan 28, 2016 11:03:34 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Feb 10, 2016 2:27:27 PM</p>
 </div>
 </div>
 </body>

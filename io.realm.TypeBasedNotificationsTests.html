@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.968s</div>
+<div class="counter">0.952s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">96%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,40 +54,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="callback_with_relevant_commit_from_different_looper_realmobject_async"></a>
-<h3 class="failures">callback_with_relevant_commit_from_different_looper_realmobject_async</h3>
-<span class="code">
-<pre>java.lang.AssertionError
-at org.junit.Assert.fail(Assert.java:86)
-at org.junit.Assert.assertTrue(Assert.java:41)
-at org.junit.Assert.assertFalse(Assert.java:64)
-at org.junit.Assert.assertFalse(Assert.java:74)
-at io.realm.TypeBasedNotificationsTests$24.onChange(TypeBasedNotificationsTests.java:627)
-at io.realm.RealmObject.notifyChangeListeners(RealmObject.java:331)
-at io.realm.HandlerController.completedAsyncRealmObject(HandlerController.java:503)
-at io.realm.HandlerController.handleMessage(HandlerController.java:110)
-at android.os.Handler.dispatchMessage(Handler.java:98)
-at android.os.Looper.loop(Looper.java:148)
-at io.realm.rule.RunInLooperThread$1$1.run(RunInLooperThread.java:101)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
-at java.util.concurrent.FutureTask.run(FutureTask.java:237)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
-at java.lang.Thread.run(Thread.java:818)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -98,11 +68,11 @@ at java.lang.Thread.run(Thread.java:818)
 </thead>
 <tr>
 <td>callback_should_trigger_for_copyToRealm</td>
-<td class="success">passed (0.027s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_copyToRealmOrUpdate</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_createObject</td>
@@ -110,51 +80,51 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>callback_should_trigger_for_createObjectFromJson</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_createObjectFromJson_from_JSONObject</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_createObject_dynamic_realm</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_createOrUpdateObjectFromJson</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>callback_should_trigger_for_createOrUpdateObjectFromJson_from_JSONObject</td>
-<td class="success">passed (0.001s)</td>
-</tr>
-<tr>
-<td>callback_with_relevant_commit_from_different_looper_realmobject_async</td>
-<td class="failures">failed (0.030s)</td>
-</tr>
-<tr>
-<td>callback_with_relevant_commit_from_different_non_looper_realmobject_async</td>
-<td class="success">passed (0.057s)</td>
-</tr>
-<tr>
-<td>callback_with_relevant_commit_realmobject_async</td>
 <td class="success">passed (0.028s)</td>
 </tr>
 <tr>
+<td>callback_with_relevant_commit_from_different_looper_realmobject_async</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>callback_with_relevant_commit_from_different_non_looper_realmobject_async</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>callback_with_relevant_commit_realmobject_async</td>
+<td class="success">passed (0s)</td>
+</tr>
+<tr>
 <td>callback_with_relevant_commit_realmobject_sync</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.030s)</td>
 </tr>
 <tr>
 <td>callback_with_relevant_commit_realmresults_async</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>callback_with_relevant_commit_realmresults_sync</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0s)</td>
 </tr>
 <tr>
 <td>changeListener_onResultsBuiltOnDeletedLinkView</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 <tr>
 <td>change_realm_objects_map_in_listener</td>
@@ -162,23 +132,23 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>change_realm_results_map_in_listener</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>multiple_callbacks_should_be_invoked_realmobject_async</td>
-<td class="success">passed (0s)</td>
+<td class="success">passed (0.027s)</td>
 </tr>
 <tr>
 <td>multiple_callbacks_should_be_invoked_realmobject_sync</td>
-<td class="success">passed (0.029s)</td>
-</tr>
-<tr>
-<td>multiple_callbacks_should_be_invoked_realmresults_async</td>
 <td class="success">passed (0s)</td>
 </tr>
 <tr>
+<td>multiple_callbacks_should_be_invoked_realmresults_async</td>
+<td class="success">passed (0.027s)</td>
+</tr>
+<tr>
 <td>multiple_callbacks_should_be_invoked_realmresults_sync</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.028s)</td>
 </tr>
 <tr>
 <td>non_looper_thread_commit_realmobject_async</td>
@@ -190,7 +160,7 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>non_looper_thread_commit_realmresults_async</td>
-<td class="success">passed (0.030s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>non_looper_thread_commit_realmresults_sync</td>
@@ -198,23 +168,23 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>refresh_should_notify_callbacks_mixed</td>
-<td class="success">passed (0.030s)</td>
-</tr>
-<tr>
-<td>refresh_should_notify_callbacks_realmobject_async</td>
-<td class="success">passed (0.027s)</td>
-</tr>
-<tr>
-<td>refresh_should_notify_callbacks_realmobject_sync</td>
-<td class="success">passed (0.028s)</td>
-</tr>
-<tr>
-<td>refresh_should_notify_callbacks_realmresults_async</td>
 <td class="success">passed (0.029s)</td>
 </tr>
 <tr>
+<td>refresh_should_notify_callbacks_realmobject_async</td>
+<td class="success">passed (0.028s)</td>
+</tr>
+<tr>
+<td>refresh_should_notify_callbacks_realmobject_sync</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
+<td>refresh_should_notify_callbacks_realmresults_async</td>
+<td class="success">passed (0.030s)</td>
+</tr>
+<tr>
 <td>refresh_should_notify_callbacks_realmresults_sync</td>
-<td class="success">passed (0.026s)</td>
+<td class="success">passed (0.029s)</td>
 </tr>
 <tr>
 <td>should_throw_on_non_looper_thread_realm</td>
@@ -222,18 +192,18 @@ at java.lang.Thread.run(Thread.java:818)
 </tr>
 <tr>
 <td>should_throw_on_non_looper_thread_realmobject</td>
-<td class="success">passed (0.029s)</td>
+<td class="success">passed (0.026s)</td>
 </tr>
 <tr>
 <td>should_throw_on_non_looper_thread_realmresults</td>
-<td class="success">passed (0.028s)</td>
+<td class="success">passed (0.025s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.10</a> at Feb 16, 2016 10:04:08 PM</p>
+<a href="http://www.gradle.org">Gradle 2.10</a> at Feb 16, 2016 10:09:01 PM</p>
 </div>
 </div>
 </body>
